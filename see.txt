@@ -1,0 +1,4413 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/2000/REC-xhtml1-20000126/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="http://www.facebook.com/2008/fbml">
+<head>
+	
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>Radio K :: App Frequently Asked Questions</title>
+<meta name="description" content="" />
+<meta name="generator" content="concrete5 - 5.6.1.2" />
+<script type="text/javascript">
+var CCM_DISPATCHER_FILENAME = '/index.php';var CCM_CID = 1672;var CCM_EDIT_MODE = false;var CCM_ARRANGE_MODE = false;var CCM_IMAGE_PATH = "/updates/concrete5.6.1.2/concrete/images";
+var CCM_TOOLS_PATH = "/tools/required";
+var CCM_BASE_URL = "http://www.radiok.org";
+var CCM_REL = "";
+
+</script>
+
+	<link rel="shortcut icon" href="/files/8513/8919/0916/favicon.ico" type="image/x-icon" />
+	<link rel="icon" href="/files/8513/8919/0916/favicon.ico" type="image/x-icon" />
+
+<link rel="stylesheet" type="text/css" href="/updates/concrete5.6.1.2/concrete/css/ccm.base.css?v=1133b281fd57582b17a8da2a9332f503" />
+<script type="text/javascript" src="/updates/concrete5.6.1.2/concrete/js/jquery.js?v=1133b281fd57582b17a8da2a9332f503"></script>
+<script type="text/javascript" src="/updates/concrete5.6.1.2/concrete/js/ccm.base.js?v=1133b281fd57582b17a8da2a9332f503"></script>
+<script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=false"></script>
+<meta property="og:title" content="App Frequently Asked Questions" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.radiok.org/app-faq/" />
+<meta property="og:image" content="http://www.radiok.org/files/2114/0297/8121/1024x768.jpg" />
+<meta property="og:image:width" content="1026" />
+<meta property="og:image:height" content="768" />
+<meta property="og:site_name" content="Radio K" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@radiok" />
+<meta name="og:locale" content="en_US" />
+<meta name="og:updated_time" content="2016-02-10T12:59:50-06:00" />
+<style type="text/css"> 
+#blockStyle15306Main631 {background-repeat:no-repeat; } 
+#blockStyle15307Main631 {background-repeat:no-repeat; } 
+#blockStyle15311Main632 {background-repeat:no-repeat; margin-bottom: 0 !important;} 
+#blockStyle15313Main631 {background-repeat:no-repeat; } 
+#blockStyle15330Main633 {background-color:#ffffff; background-repeat:no-repeat; background-color:#FFF !important;} 
+#blockStyle15332Main635 {background-repeat:no-repeat; } 
+#blockStyle15333Main636 {background-repeat:no-repeat; } 
+#blockStyle15334Main637 {background-repeat:no-repeat; } 
+#blockStyle16099Main631 {background-repeat:no-repeat; } 
+#blockStyle16430Main634 {background-repeat:no-repeat; background-color:#FFF !important;} 
+#blockStyle15314Main631 {background-repeat:no-repeat; } 
+#blockStyle15315Main631 {background-repeat:no-repeat; } 
+#blockStyle15316Main631 {background-repeat:no-repeat; } 
+#blockStyle15317Main631 {background-repeat:no-repeat; } 
+#blockStyle15336Main639 {background-repeat:no-repeat; } 
+#blockStyle15337Main640 {background-repeat:no-repeat; left-pad:15px;margin-top:-15px;} 
+#blockStyle15341Main645 {background-repeat:no-repeat; } 
+#blockStyle15363Main631 {background-repeat:no-repeat; } 
+#blockStyle15364Main648 {background-repeat:no-repeat; } 
+#blockStyle15365Main649 {background-repeat:no-repeat; } 
+#blockStyle15394Main642 {background-repeat:no-repeat; } 
+#blockStyle16811Main646 {background-repeat:no-repeat; } 
+#blockStyle16931Main638 {background-repeat:no-repeat; } 
+</style>
+<link rel="stylesheet" type="text/css" href="/packages/page_list_teasers/blocks/page_list/view.css?v=1133b281fd57582b17a8da2a9332f503" />
+<link rel="stylesheet" type="text/css" href="/css/site.jquery.ui.css?v=1133b281fd57582b17a8da2a9332f503" />
+<script type="text/javascript" src="/js/site.jquery.ui.js?v=1133b281fd57582b17a8da2a9332f503"></script>
+<link rel="stylesheet" type="text/css" href="/blocks/slideshow/view.css?v=1133b281fd57582b17a8da2a9332f503" />
+<link rel="stylesheet" type="text/css" href="/packages/proevents/blocks/pro_event_list/templates/show_schedule_right_sidebar/view.css?v=1133b281fd57582b17a8da2a9332f503" />
+<link rel="stylesheet" type="text/css" href="/updates/concrete5.6.1.2/concrete/css/jquery.ui.css?v=1133b281fd57582b17a8da2a9332f503" />
+<link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="/updates/concrete5.6.1.2/concrete/css/ccm.app.css?v=1133b281fd57582b17a8da2a9332f503" />
+		<link media="screen" type="text/css" rel="stylesheet" href="/themes/radiok/css/reset.css?v=1435843373" />	<link media="screen" type="text/css" rel="stylesheet" href="/themes/radiok/css/typography.css?v=1435843373" />	<link media="screen" type="text/css" rel="stylesheet" href="/themes/radiok/css/main.css?v=1452102437" />	
+	<meta name="description" content="The acclaimed college radio station of the University of Minnesota" />
+	<meta name="keywords" content="radio music university minnesota minneapolis st. paul college indie alternative rock" />
+	<meta name="google-site-verification" content="JXX1IeZvMRP1OnmbUnABDKHTc7WrSxH2oSr1nznZKBU" />
+	
+			<script type="text/javascript" src="/themes/radiok/js/cufon-yui.js?v=1435843373"></script>		<script type="text/javascript" src="/themes/radiok/js/font.js?v=1435843373"></script>		<script type="text/javascript" src="/themes/radiok/js/effects.js?v=1435843373"></script>		<script type="text/javascript" src="/themes/radiok/js/fancybox/jquery.fancybox-1.3.4.pack.js?v=1435843373"></script>		<link media="screen" type="text/css" rel="stylesheet" href="/themes/radiok/js/fancybox/jquery.fancybox-1.3.4.css?v=1435843373" />		
+		<script type="text/javascript">
+		$(document).ready(function() { 
+			/ * This is basic - uses default settings * / 
+			$("a.fancybox").fancybox();
+			
+			$("a.iframe").fancybox({
+				'width': '75%',
+				'height': '95%',
+				'autoScale': false,
+				'transitionIn': 'none',
+				'transitionOut': 'none',
+				'type': 'iframe'
+			});
+			if($('a.email').length > 0) {
+				$.getScript('/themes/radiok/js/jquery.mailto.js?v=1435843373',function(){ 
+					$('a.email').mailto();
+				});
+			}
+			if(true == ("ontouchstart" in window || window.DocumentTouch && document instanceof DocumentTouch)) {
+				$.getScript('/themes/radiok/js/doubletaptogo.js?v=1435843373', function() {
+					$('#navbar .nav-ul .dropdown').doubleTapToGo();
+				});
+			}
+		});
+		</script>
+		
+	<!--[if IE 6]>
+	<script type="text/javascript" src="/themes/radiok/js/IE8.js?v=1435843373"></script>	<link media="screen" type="text/css" rel="stylesheet" href="/themes/radiok/css/ie.css?v=1435843373" />	<![endif]-->
+</head>
+
+<body>
+	<style type="text/css">
+		.cufon-loading h1, .cufon-loading h2, .cufon-loading #carousel h3 {
+			visibility: hidden !important;
+		}
+		.cufon-loading #carousel h3 {
+			font-size: 9px;
+		}
+		.ccm-SlideshowBlock-display, .ccm-SlideshowBlock-display .slideImgWrap div {
+			height: 60px !important;
+			background-color: #2F2F2F;
+		}
+		.ccm-SlideshowBlock-display .slideImgWrap {
+			top: 0 !important;
+		}
+	</style>
+	<div id="navbar">  	
+		<div class="container">
+			<div style="margin-top:0px;padding-left:15px;padding-right:0px"><a href="/" class="logo"><img src="/themes/radiok/images/dashboard_logo.png?v=1449511085" alt="Radio K" height="80px"/></a></div>
+			<ul class='nav-ul'>
+			<li><a href="/schedule/">Schedule</a></li><li><a href="/events/">Events</a></li><li><a href="/playlist/">Playlist</a></li><li><a href="/instudios/">In-studios</a></li><li class="dropdown"><a href="/features/">Features</a><ul class='dropdown-list'><li class="dropdown-item"><a href="/features/specialty-shows/">Specialty Shows</a></li><li class="dropdown-item"><a href="/features/totd/">Track of the Day</a></li><li class="dropdown-item"><a href="/features/weekly-release-spotlight/">Weekly Release</a></li><li class="dropdown-item"><a href="/features/shows/">Show Reviews</a></li></ul></li><li class="dropdown"><a href="/support/">Ways to Give</a><ul class='dropdown-list'><li class="dropdown-item"><a href="/donate/">Donate Now</a></li><li class="dropdown-item"><a href="/support#underwriter">Become an Underwriter</a></li><li class="dropdown-item"><a href="/support#sponsorships">Sponsorships</a></li><li class="dropdown-item"><a href="/support#volunteer">Volunteer</a></li><li class="dropdown-item"><a href="http://z.umn.edu/musicloverscard">Music Lover's Card Discounts</a></li></ul></li><li class="dropdown"><a href="/about/">About</a><ul class='dropdown-list'><li class="dropdown-item"><a href="/about/contact-information/">Contact</a></li><li class="dropdown-item"><a href="/about/in-the-press/">Press</a></li><li class="dropdown-item"><a href="/about/underwriters/">Underwriters</a></li><li class="dropdown-item"><a href="/about/volunteer/">Volunteer</a></li><li class="dropdown-item"><a href="/about/history/">History</a></li><li class="dropdown-item"><a href="/about/archives/">Archives</a></li><li class="dropdown-item"><a href="/about/awards/">Awards</a></li></ul></li>			</ul>
+			<div>
+				<div>
+					<div style="float:left;padding-left:0px;padding-top:10px;margin-left:25px;width:42px;padding-right:5px;"><a href="http://facebook.com/radiok"><img src="/themes/radiok/images/facebook.png?v=1449511085"/></a></div>
+					<div style="float:left;padding-top:10px;width:42px;padding-right:0px;"><a href="http://www.twitter.com/radiok"><img src="/themes/radiok/images/twitter.png?v=1449511085"/></a></div>
+					<div style="float:left;padding-top:10px;width:42px;padding-right:0px;"><a href="http://www.youtube.com/radiok770"><img src="/themes/radiok/images/youtube.png?v=1449511085"/></a></div>
+					<div style="float:left;padding-top:6px;width:42px;padding-right:0px;"><a href="http://www.twitter.com/radiokplaylist"><img src="/themes/radiok/images/twittermusicicon.png?v=1449511085"/></a></div>
+				</div>
+				<div style="padding-top:20px;">
+					<form class="search" method="get" action="/search">
+						<input type="text" name="q" class="q" value="Search Radio K" />
+						<input type="submit" class="submit" value="Search" />
+					</form>
+					<script type="text/javascript">
+						var input = $(".search input.q");
+						input.click(function() {
+							input.val('');
+						});
+						
+						input.blur(function() {
+							if (input.val() == '') {
+								input.val('Search Radio K');
+							}
+						});
+					</script>
+				</div>
+			</div>
+		</div>
+	</div>
+<div id="wrapper_wide" class="clearfix">
+	<div id="left_shadow">
+			<div id="blockStyle15330Main633" class="topbox boxed ccm-block-styles" >
+<h2>Now Playing<br>On Radio K</h2>
+<div id="nowplaying">
+			<span style="font-size: 18px; margin-left: 0px; padding-left: 0px; color: rgb(0, 0, 0); letter-spacing: -1px; position: relative; "><strong>DJ: Elsie S</strong></span>
+					<div class="songblock" style="border:none">
+				<span>
+					<strong>Prince Rama</strong>
+					<br/>Slip into Nevermore				</span>
+				<br><em>Xtreme Now</em>
+			</div>
+			</div>
+<div id="nowplaying-moreinfo">
+	<strong><em><a href="/playlists/">View Song Log »</a><br><a href="/request/">Request a Song »</a></em></strong>
+	<script src="/themes/radiok/js/nowplayingupdater.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('body').delegate('#streamplay', 'click', function(e) {
+				$('#kstream')[0].play();
+				$('#playdiv').hide();
+				$('#pausediv,#stopdiv').show();
+				e.preventDefault();
+			});
+			$('body').delegate('#streampause', 'click', function(e) {
+				$('#kstream')[0].pause();
+				$('#playdiv').show();
+				$('#pausediv,#stopdiv').hide();
+				e.preventDefault();
+			});
+			$('body').delegate('#streamstop', 'click', function(e) {
+				$('#kstream')[0].load();
+				$('#kstream')[0].currentTime = 0;
+				$('#playdiv').show();
+				$('#pausediv,#stopdiv').hide();
+				e.preventDefault();
+			});
+			if(!!$('#kstream')[0].canPlayType) {
+				$('#playdiv').show();
+			}
+		});
+	</script>
+	<div id="playdiv" style="display:none;">
+		<b>
+			<i>
+				<a href="#" id="streamplay">
+					<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 357 357" fill="currentColor"><path d="M38.25 0v357l280.5-178.5z"/></svg>
+					&nbsp;Play
+				</a>
+			</i>
+		</b>
+	</div>
+	<div id="pausediv" style="display:none;">
+		<b>
+			<i>
+				<a href="#" id="streampause">
+					<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 357 357" fill="currentColor"><path d="M25.5 357h102V0h-102v357zm204-357v357h102V0h-102z"/></svg>
+					&nbsp;Pause
+				</a>
+			</i>
+		</b>
+	</div>
+	<div id="stopdiv" style="display:none;">
+		<b>
+			<i>
+				<a href="#" id="streamstop">
+					<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 306 306" fill="currentColor"><path d="M0 0h306v306H0z"/></svg>
+					&nbsp;Stop
+				</a>
+			</i>
+		</b>
+	</div>
+	<audio src="http://radiokstreams.cce.umn.edu:8128/;" id="kstream"></audio>
+</div></div>	<div id="blockStyle16430Main634" class="shadowbox boxed ccm-block-styles" >
+<h2 style="text-align: left; border: 0pt !important;"><strong>STREAM:    </strong><span style="color: #000000;"><a style="font-size: 1em;" onclick="javascript: pageTracker._trackPageview('/listen/128k');" href="http://radiokstreams.cce.umn.edu:8128/listen.pls"><span style="color: #000000;">128k</span></a></span><span style="font-size: 1em;">    </span><span style="color: #000000;"><a style="font-size: 1em;" onclick="javascript: pageTracker._trackPageview('/listen/256k');" href="http://radiokstreams.cce.umn.edu:8256/listen.pls"><span style="color: #000000;">256k</span></a></span></h2>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="	http://www.radiok.org/files/6813/9940/3940/just_signals.png" alt="770 AM, 100.7 and 104.5 FM" width="175" height="20" /></p></div>	<div id="blockStyle15332Main635" class="shadowbox boxed bottombox ccm-block-styles" >
+<h2 style="border: 0pt !important;"><strong>STUDIO: 612-626-4770</strong></h2></div>	<div id="blockStyle15306Main631" class="grey-bar ccm-block-styles" >
+</div>	<div id="blockStyle15333Main636" class="boxed solobox ccm-block-styles" >
+<div class="ccm-page-list" style="padding-bottom:15px;padding-left:10px;">
+		
+	
+			<h2><a href="http://www.radiok.org/features/wrs" style="color:#000;">WEEKLY RELEASE SPOTLIGHT</a></h2>
+		<div class="ccm-page-list-description" style="text-align:center;margin-left:-10px;">
+			<a href="/features/weekly-release-spotlight/morly/" target="_self">
+			<img class="ccm-output-thumbnail" alt="" src="/files/cache/cb41109f36b1e84647f4f5bde383f284_f16007.jpg" width="200" height="200" />			<br>
+			</a>
+			<div style="padding-top:10px;">
+			<b>Morly</b>
+			<br>
+			<i>Something More Holy EP</i>			
+			<br>
+			</div>
+		</div>
+		
+	
+
+</div><!-- end .ccm-page-list -->
+
+
+</div>	<div id="blockStyle15307Main631" class="grey-bar ccm-block-styles" >
+</div>	<div id="blockStyle15334Main637" class="boxed solobox ccm-block-styles" >
+<div class="ccm-page-list" style="padding-bottom:15px;padding-left:10px;">
+			<h2><a href="http://www.radiok.org/features/totd" style="color:#000;">TRACK OF THE DAY</a></h2>
+		<div class="ccm-page-list-description" style="text-align:center;margin-left:-10px;">
+			<a href="/features/totd/controversial-new-skinny-pill/" target="_self">
+			<img class="ccm-output-thumbnail" alt="" src="/files/cache/83c0f2b6a4042e41b8fbc454cab94d23_f16043.jpg" width="200" height="192" />			<br>
+			</a>
+			<div style="padding-top:10px;">
+			<b>The Controversial New 'Skinny Pill'</b>
+			<br>
+			<i>Told Me So</i>			
+			<br>
+			</div>
+		</div>
+		
+	
+
+	
+</div><!-- end .ccm-page-list -->
+
+
+</div>	<div id="blockStyle15311Main632" class="grey-bar ccm-block-styles" >
+</div>
+<script type="text/javascript">
+//<![CDATA[
+var ccmSlideShowHelper16870 = {
+
+	bID:16870,
+	imgNum:0,
+	
+	init:function(){
+		this.displayWrap=$('#ccm-SlideshowBlock-display'+this.bID); 
+		if(this.imgInfos.length==0){
+			//alert('There are no images in this slideshow');
+			return false;
+		}
+		var maxHeight=0;
+		for(var i=0;i<this.imgInfos.length;i++){
+			this.addImg(i);
+			if(maxHeight==0 || this.imgInfos[i].imgHeight > maxHeight)
+				maxHeight=this.imgInfos[i].imgHeight;
+		}
+		this.displayWrap.css('height',maxHeight);
+
+		
+		//center images
+		for(var i=0;i<this.imgInfos.length;i++){ 
+			if( this.imgInfos[i].imgHeight < maxHeight){
+				var t=((maxHeight - this.imgInfos[i].imgHeight)/2);
+				this.imgEls[i].css('top',t);
+			}
+		}
+		this.nextImg();
+	}, 
+	nextImg:function(){ 
+		if(this.imgNum>=this.imgInfos.length) this.imgNum=0;  
+		this.imgEls[this.imgNum].css('opacity',0);
+		this.imgEls[this.imgNum].css('display','block');
+		this.imgEls[this.imgNum].animate({opacity:1},
+			this.imgInfos[this.imgNum].fadeDuration*1000,'',function(){ccmSlideShowHelper16870.preparefadeOut()});
+		var prevNum=this.imgNum-1;
+		if(prevNum<0) prevNum=this.imgInfos.length-1;
+		if(this.imgInfos.length==1) return;
+		this.imgEls[prevNum].animate({opacity:0},this.imgInfos[this.imgNum].fadeDuration*800,function(){this.style.zIndex=1;});			
+	},
+	preparefadeOut:function(){
+		if(this.imgInfos.length==1) return;
+		var milisecDuration=parseInt(this.imgInfos[this.imgNum].duration)*1000;
+		this.imgEls[this.imgNum].css('z-index',2);
+		setTimeout('ccmSlideShowHelper'+16870+'.nextImg();',milisecDuration);
+		this.imgNum++;
+	},
+	maxHeight:0,
+	imgEls:[],
+	addImg:function(num){
+		var el=document.createElement('div');
+		el.id="slideImgWrap"+num;
+		el.className="slideImgWrap"; 
+		if(this.imgInfos[num].fullFilePath.length>0)
+			 imgURL=this.imgInfos[num].fullFilePath;
+		else imgURL='/files/'+this.imgInfos[num].fileName; 
+		//el.innerHTML='<img src="'+imgURL+'" >';
+		el.innerHTML='<div style="height:'+this.imgInfos[num].imgHeight+'px; background:url(\''+escape(imgURL)+'\') center no-repeat">&nbsp;</div>';
+		//alert(imgURL);
+		if(this.imgInfos[num].url.length>0) {
+			//el.linkURL=this.imgInfos[num].url;
+			var clickEvent='onclick="return ccmSlideShowHelper16870.imgClick( this.href  );"';
+			el.innerHTML='<a href="'+this.imgInfos[num].url+'" '+clickEvent+' >'+el.innerHTML+'</a>';			
+		}
+		el.style.display='none';
+		this.displayWrap.append(el);
+		var jqEl=$(el);
+		this.imgEls.push(jqEl);
+	},
+	imgClick:function(linkURL){
+		//override for custom behavior
+	},
+	imgInfos:[
+				{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				fullFilePath:"/files/8214/5341/5037/CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://www.minnesotaorchestra.org/buy/tickets/browse-calendar/eventdetail/594/-/inside-the-classics-hipster-vs-nerd?utm_source=radiok&utm_medium=banner&utm_campaign=studentrush_gopher#.Vp_LMOgrJD9",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"LACwebtile.png",
+				fullFilePath:"/files/8914/4961/1609/LACwebtile.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://umabroad.umn.edu/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"University_Student_Legal_Service_Banner.jpg",
+				fullFilePath:"/files/4214/5021/5018/University_Student_Legal_Service_Banner.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://usls.umn.edu/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				fullFilePath:"/files/8214/5341/5037/CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://www.minnesotaorchestra.org/buy/tickets/browse-calendar/eventdetail/594/-/inside-the-classics-hipster-vs-nerd?utm_source=radiok&utm_medium=banner&utm_campaign=studentrush_gopher#.Vp_LMOgrJD9",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"UMF-2015-blk-maroon-side_234x60.jpg",
+				fullFilePath:"/files/2914/5021/5018/UMF-2015-blk-maroon-side_234x60.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://z.umn.edu/callers",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"scrc.png",
+				fullFilePath:"/files/3414/4994/4619/scrc.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://www.sos.umn.edu",
+				groupSet:0,
+				imgHeight:43			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				fullFilePath:"/files/8214/5341/5037/CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://www.minnesotaorchestra.org/buy/tickets/browse-calendar/eventdetail/594/-/inside-the-classics-hipster-vs-nerd?utm_source=radiok&utm_medium=banner&utm_campaign=studentrush_gopher#.Vp_LMOgrJD9",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"the-whole.jpg",
+				fullFilePath:"/files/3214/5021/5018/the-whole.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sua.umn.edu/whole/about/history/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"UMF-2015-blk-maroon-side_234x60.jpg",
+				fullFilePath:"/files/2914/5021/5018/UMF-2015-blk-maroon-side_234x60.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://z.umn.edu/callers",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				fullFilePath:"/files/8214/5341/5037/CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://www.minnesotaorchestra.org/buy/tickets/browse-calendar/eventdetail/594/-/inside-the-classics-hipster-vs-nerd?utm_source=radiok&utm_medium=banner&utm_campaign=studentrush_gopher#.Vp_LMOgrJD9",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"resized.png",
+				fullFilePath:"/files/3614/4919/0224/resized.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://www1.umn.edu/aurora/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"University_Student_Legal_Service_Banner.jpg",
+				fullFilePath:"/files/4214/5021/5018/University_Student_Legal_Service_Banner.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://usls.umn.edu/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				fullFilePath:"/files/8214/5341/5037/CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://www.minnesotaorchestra.org/buy/tickets/browse-calendar/eventdetail/594/-/inside-the-classics-hipster-vs-nerd?utm_source=radiok&utm_medium=banner&utm_campaign=studentrush_gopher#.Vp_LMOgrJD9",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"UMF-2015-blk-maroon-side_234x60.jpg",
+				fullFilePath:"/files/2914/5021/5018/UMF-2015-blk-maroon-side_234x60.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://z.umn.edu/callers",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"RADIOK_LOGO1.jpg",
+				fullFilePath:"/files/8014/4227/5957/RADIOK_LOGO1.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://ascendprocoach.com/",
+				groupSet:0,
+				imgHeight:201			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				fullFilePath:"/files/8214/5341/5037/CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://www.minnesotaorchestra.org/buy/tickets/browse-calendar/eventdetail/594/-/inside-the-classics-hipster-vs-nerd?utm_source=radiok&utm_medium=banner&utm_campaign=studentrush_gopher#.Vp_LMOgrJD9",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Radio-K-Online.gif",
+				fullFilePath:"/files/8713/5888/9195/Radio-K-Online.gif",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://www.mndaily.com",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"UMF-2015-blk-maroon-side_234x60.jpg",
+				fullFilePath:"/files/2914/5021/5018/UMF-2015-blk-maroon-side_234x60.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://z.umn.edu/callers",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				fullFilePath:"/files/8214/5341/5037/CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://www.minnesotaorchestra.org/buy/tickets/browse-calendar/eventdetail/594/-/inside-the-classics-hipster-vs-nerd?utm_source=radiok&utm_medium=banner&utm_campaign=studentrush_gopher#.Vp_LMOgrJD9",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"scrc.png",
+				fullFilePath:"/files/3414/4994/4619/scrc.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://www.sos.umn.edu",
+				groupSet:0,
+				imgHeight:43			}
+		,			{
+				fileName:"University_Student_Legal_Service_Banner.jpg",
+				fullFilePath:"/files/4214/5021/5018/University_Student_Legal_Service_Banner.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://usls.umn.edu/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				fullFilePath:"/files/8214/5341/5037/CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://www.minnesotaorchestra.org/buy/tickets/browse-calendar/eventdetail/594/-/inside-the-classics-hipster-vs-nerd?utm_source=radiok&utm_medium=banner&utm_campaign=studentrush_gopher#.Vp_LMOgrJD9",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"UMF-2015-blk-maroon-side_234x60.jpg",
+				fullFilePath:"/files/2914/5021/5018/UMF-2015-blk-maroon-side_234x60.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://z.umn.edu/callers",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"the-whole.jpg",
+				fullFilePath:"/files/3214/5021/5018/the-whole.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sua.umn.edu/whole/about/history/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				fullFilePath:"/files/8214/5341/5037/CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://www.minnesotaorchestra.org/buy/tickets/browse-calendar/eventdetail/594/-/inside-the-classics-hipster-vs-nerd?utm_source=radiok&utm_medium=banner&utm_campaign=studentrush_gopher#.Vp_LMOgrJD9",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"LACwebtile.png",
+				fullFilePath:"/files/8914/4961/1609/LACwebtile.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://umabroad.umn.edu/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"UMF-2015-blk-maroon-side_234x60.jpg",
+				fullFilePath:"/files/2914/5021/5018/UMF-2015-blk-maroon-side_234x60.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://z.umn.edu/callers",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				fullFilePath:"/files/8214/5341/5037/CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://www.minnesotaorchestra.org/buy/tickets/browse-calendar/eventdetail/594/-/inside-the-classics-hipster-vs-nerd?utm_source=radiok&utm_medium=banner&utm_campaign=studentrush_gopher#.Vp_LMOgrJD9",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"RADIOK_LOGO2.jpg",
+				fullFilePath:"/files/3914/4227/5970/RADIOK_LOGO2.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://ascendprocoach.com/",
+				groupSet:0,
+				imgHeight:201			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"University_Student_Legal_Service_Banner.jpg",
+				fullFilePath:"/files/4214/5021/5018/University_Student_Legal_Service_Banner.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://usls.umn.edu/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				fullFilePath:"/files/8214/5341/5037/CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://www.minnesotaorchestra.org/buy/tickets/browse-calendar/eventdetail/594/-/inside-the-classics-hipster-vs-nerd?utm_source=radiok&utm_medium=banner&utm_campaign=studentrush_gopher#.Vp_LMOgrJD9",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"UMF-2015-blk-maroon-side_234x60.jpg",
+				fullFilePath:"/files/2914/5021/5018/UMF-2015-blk-maroon-side_234x60.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://z.umn.edu/callers",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"resized.png",
+				fullFilePath:"/files/3614/4919/0224/resized.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://www1.umn.edu/aurora/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				fullFilePath:"/files/8214/5341/5037/CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://www.minnesotaorchestra.org/buy/tickets/browse-calendar/eventdetail/594/-/inside-the-classics-hipster-vs-nerd?utm_source=radiok&utm_medium=banner&utm_campaign=studentrush_gopher#.Vp_LMOgrJD9",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"scrc.png",
+				fullFilePath:"/files/3414/4994/4619/scrc.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://www.sos.umn.edu",
+				groupSet:0,
+				imgHeight:43			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"UMF-2015-blk-maroon-side_234x60.jpg",
+				fullFilePath:"/files/2914/5021/5018/UMF-2015-blk-maroon-side_234x60.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://z.umn.edu/callers",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				fullFilePath:"/files/8214/5341/5037/CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://www.minnesotaorchestra.org/buy/tickets/browse-calendar/eventdetail/594/-/inside-the-classics-hipster-vs-nerd?utm_source=radiok&utm_medium=banner&utm_campaign=studentrush_gopher#.Vp_LMOgrJD9",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"the-whole.jpg",
+				fullFilePath:"/files/3214/5021/5018/the-whole.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sua.umn.edu/whole/about/history/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"University_Student_Legal_Service_Banner.jpg",
+				fullFilePath:"/files/4214/5021/5018/University_Student_Legal_Service_Banner.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://usls.umn.edu/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				fullFilePath:"/files/8214/5341/5037/CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://www.minnesotaorchestra.org/buy/tickets/browse-calendar/eventdetail/594/-/inside-the-classics-hipster-vs-nerd?utm_source=radiok&utm_medium=banner&utm_campaign=studentrush_gopher#.Vp_LMOgrJD9",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"UMF-2015-blk-maroon-side_234x60.jpg",
+				fullFilePath:"/files/2914/5021/5018/UMF-2015-blk-maroon-side_234x60.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://z.umn.edu/callers",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"schoolofmusic.jpg",
+				fullFilePath:"/files/3812/8997/3669/schoolofmusic.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://www.music.umn.edu/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				fullFilePath:"/files/8214/5341/5037/CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://www.minnesotaorchestra.org/buy/tickets/browse-calendar/eventdetail/594/-/inside-the-classics-hipster-vs-nerd?utm_source=radiok&utm_medium=banner&utm_campaign=studentrush_gopher#.Vp_LMOgrJD9",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"LACwebtile.png",
+				fullFilePath:"/files/8914/4961/1609/LACwebtile.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://umabroad.umn.edu/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"UMF-2015-blk-maroon-side_234x60.jpg",
+				fullFilePath:"/files/2914/5021/5018/UMF-2015-blk-maroon-side_234x60.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://z.umn.edu/callers",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				fullFilePath:"/files/8214/5341/5037/CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://www.minnesotaorchestra.org/buy/tickets/browse-calendar/eventdetail/594/-/inside-the-classics-hipster-vs-nerd?utm_source=radiok&utm_medium=banner&utm_campaign=studentrush_gopher#.Vp_LMOgrJD9",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"RADIOK_LOGO1.jpg",
+				fullFilePath:"/files/8014/4227/5957/RADIOK_LOGO1.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://ascendprocoach.com/",
+				groupSet:0,
+				imgHeight:201			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"University_Student_Legal_Service_Banner.jpg",
+				fullFilePath:"/files/4214/5021/5018/University_Student_Legal_Service_Banner.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://usls.umn.edu/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				fullFilePath:"/files/8214/5341/5037/CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://www.minnesotaorchestra.org/buy/tickets/browse-calendar/eventdetail/594/-/inside-the-classics-hipster-vs-nerd?utm_source=radiok&utm_medium=banner&utm_campaign=studentrush_gopher#.Vp_LMOgrJD9",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"UMF-2015-blk-maroon-side_234x60.jpg",
+				fullFilePath:"/files/2914/5021/5018/UMF-2015-blk-maroon-side_234x60.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://z.umn.edu/callers",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"scrc.png",
+				fullFilePath:"/files/3414/4994/4619/scrc.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://www.sos.umn.edu",
+				groupSet:0,
+				imgHeight:43			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				fullFilePath:"/files/8214/5341/5037/CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://www.minnesotaorchestra.org/buy/tickets/browse-calendar/eventdetail/594/-/inside-the-classics-hipster-vs-nerd?utm_source=radiok&utm_medium=banner&utm_campaign=studentrush_gopher#.Vp_LMOgrJD9",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"the-whole.jpg",
+				fullFilePath:"/files/3214/5021/5018/the-whole.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sua.umn.edu/whole/about/history/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"UMF-2015-blk-maroon-side_234x60.jpg",
+				fullFilePath:"/files/2914/5021/5018/UMF-2015-blk-maroon-side_234x60.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://z.umn.edu/callers",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				fullFilePath:"/files/8214/5341/5037/CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://www.minnesotaorchestra.org/buy/tickets/browse-calendar/eventdetail/594/-/inside-the-classics-hipster-vs-nerd?utm_source=radiok&utm_medium=banner&utm_campaign=studentrush_gopher#.Vp_LMOgrJD9",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Radio-K-Online.gif",
+				fullFilePath:"/files/8713/5888/9195/Radio-K-Online.gif",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://www.mndaily.com",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"University_Student_Legal_Service_Banner.jpg",
+				fullFilePath:"/files/4214/5021/5018/University_Student_Legal_Service_Banner.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://usls.umn.edu/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				fullFilePath:"/files/8214/5341/5037/CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://www.minnesotaorchestra.org/buy/tickets/browse-calendar/eventdetail/594/-/inside-the-classics-hipster-vs-nerd?utm_source=radiok&utm_medium=banner&utm_campaign=studentrush_gopher#.Vp_LMOgrJD9",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"UMF-2015-blk-maroon-side_234x60.jpg",
+				fullFilePath:"/files/2914/5021/5018/UMF-2015-blk-maroon-side_234x60.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://z.umn.edu/callers",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"resized.png",
+				fullFilePath:"/files/3614/4919/0224/resized.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://www1.umn.edu/aurora/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				fullFilePath:"/files/8214/5341/5037/CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://www.minnesotaorchestra.org/buy/tickets/browse-calendar/eventdetail/594/-/inside-the-classics-hipster-vs-nerd?utm_source=radiok&utm_medium=banner&utm_campaign=studentrush_gopher#.Vp_LMOgrJD9",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"LACwebtile.png",
+				fullFilePath:"/files/8914/4961/1609/LACwebtile.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://umabroad.umn.edu/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"UMF-2015-blk-maroon-side_234x60.jpg",
+				fullFilePath:"/files/2914/5021/5018/UMF-2015-blk-maroon-side_234x60.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://z.umn.edu/callers",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				fullFilePath:"/files/8214/5341/5037/CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://www.minnesotaorchestra.org/buy/tickets/browse-calendar/eventdetail/594/-/inside-the-classics-hipster-vs-nerd?utm_source=radiok&utm_medium=banner&utm_campaign=studentrush_gopher#.Vp_LMOgrJD9",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"scrc.png",
+				fullFilePath:"/files/3414/4994/4619/scrc.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://www.sos.umn.edu",
+				groupSet:0,
+				imgHeight:43			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"University_Student_Legal_Service_Banner.jpg",
+				fullFilePath:"/files/4214/5021/5018/University_Student_Legal_Service_Banner.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://usls.umn.edu/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				fullFilePath:"/files/8214/5341/5037/CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://www.minnesotaorchestra.org/buy/tickets/browse-calendar/eventdetail/594/-/inside-the-classics-hipster-vs-nerd?utm_source=radiok&utm_medium=banner&utm_campaign=studentrush_gopher#.Vp_LMOgrJD9",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"UMF-2015-blk-maroon-side_234x60.jpg",
+				fullFilePath:"/files/2914/5021/5018/UMF-2015-blk-maroon-side_234x60.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://z.umn.edu/callers",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"the-whole.jpg",
+				fullFilePath:"/files/3214/5021/5018/the-whole.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sua.umn.edu/whole/about/history/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				fullFilePath:"/files/8214/5341/5037/CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://www.minnesotaorchestra.org/buy/tickets/browse-calendar/eventdetail/594/-/inside-the-classics-hipster-vs-nerd?utm_source=radiok&utm_medium=banner&utm_campaign=studentrush_gopher#.Vp_LMOgrJD9",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"RADIOK_LOGO2.jpg",
+				fullFilePath:"/files/3914/4227/5970/RADIOK_LOGO2.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://ascendprocoach.com/",
+				groupSet:0,
+				imgHeight:201			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"UMF-2015-blk-maroon-side_234x60.jpg",
+				fullFilePath:"/files/2914/5021/5018/UMF-2015-blk-maroon-side_234x60.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://z.umn.edu/callers",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				fullFilePath:"/files/8214/5341/5037/CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://www.minnesotaorchestra.org/buy/tickets/browse-calendar/eventdetail/594/-/inside-the-classics-hipster-vs-nerd?utm_source=radiok&utm_medium=banner&utm_campaign=studentrush_gopher#.Vp_LMOgrJD9",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Radio-K-Online.gif",
+				fullFilePath:"/files/8713/5888/9195/Radio-K-Online.gif",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://www.mndaily.com",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"University_Student_Legal_Service_Banner.jpg",
+				fullFilePath:"/files/4214/5021/5018/University_Student_Legal_Service_Banner.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://usls.umn.edu/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				fullFilePath:"/files/8214/5341/5037/CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://www.minnesotaorchestra.org/buy/tickets/browse-calendar/eventdetail/594/-/inside-the-classics-hipster-vs-nerd?utm_source=radiok&utm_medium=banner&utm_campaign=studentrush_gopher#.Vp_LMOgrJD9",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"UMF-2015-blk-maroon-side_234x60.jpg",
+				fullFilePath:"/files/2914/5021/5018/UMF-2015-blk-maroon-side_234x60.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://z.umn.edu/callers",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"RADIOK_LOGO1.jpg",
+				fullFilePath:"/files/8014/4227/5957/RADIOK_LOGO1.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://ascendprocoach.com/",
+				groupSet:0,
+				imgHeight:201			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				fullFilePath:"/files/8214/5341/5037/CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://www.minnesotaorchestra.org/buy/tickets/browse-calendar/eventdetail/594/-/inside-the-classics-hipster-vs-nerd?utm_source=radiok&utm_medium=banner&utm_campaign=studentrush_gopher#.Vp_LMOgrJD9",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"scrc.png",
+				fullFilePath:"/files/3414/4994/4619/scrc.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://www.sos.umn.edu",
+				groupSet:0,
+				imgHeight:43			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"UMF-2015-blk-maroon-side_234x60.jpg",
+				fullFilePath:"/files/2914/5021/5018/UMF-2015-blk-maroon-side_234x60.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://z.umn.edu/callers",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				fullFilePath:"/files/8214/5341/5037/CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://www.minnesotaorchestra.org/buy/tickets/browse-calendar/eventdetail/594/-/inside-the-classics-hipster-vs-nerd?utm_source=radiok&utm_medium=banner&utm_campaign=studentrush_gopher#.Vp_LMOgrJD9",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"the-whole.jpg",
+				fullFilePath:"/files/3214/5021/5018/the-whole.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sua.umn.edu/whole/about/history/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"University_Student_Legal_Service_Banner.jpg",
+				fullFilePath:"/files/4214/5021/5018/University_Student_Legal_Service_Banner.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://usls.umn.edu/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				fullFilePath:"/files/8214/5341/5037/CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://www.minnesotaorchestra.org/buy/tickets/browse-calendar/eventdetail/594/-/inside-the-classics-hipster-vs-nerd?utm_source=radiok&utm_medium=banner&utm_campaign=studentrush_gopher#.Vp_LMOgrJD9",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"UMF-2015-blk-maroon-side_234x60.jpg",
+				fullFilePath:"/files/2914/5021/5018/UMF-2015-blk-maroon-side_234x60.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://z.umn.edu/callers",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"LACwebtile.png",
+				fullFilePath:"/files/8914/4961/1609/LACwebtile.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://umabroad.umn.edu/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				fullFilePath:"/files/8214/5341/5037/CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://www.minnesotaorchestra.org/buy/tickets/browse-calendar/eventdetail/594/-/inside-the-classics-hipster-vs-nerd?utm_source=radiok&utm_medium=banner&utm_campaign=studentrush_gopher#.Vp_LMOgrJD9",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"resized.png",
+				fullFilePath:"/files/3614/4919/0224/resized.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://www1.umn.edu/aurora/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"UMF-2015-blk-maroon-side_234x60.jpg",
+				fullFilePath:"/files/2914/5021/5018/UMF-2015-blk-maroon-side_234x60.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://z.umn.edu/callers",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				fullFilePath:"/files/8214/5341/5037/CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://www.minnesotaorchestra.org/buy/tickets/browse-calendar/eventdetail/594/-/inside-the-classics-hipster-vs-nerd?utm_source=radiok&utm_medium=banner&utm_campaign=studentrush_gopher#.Vp_LMOgrJD9",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Radio-K-Online.gif",
+				fullFilePath:"/files/8713/5888/9195/Radio-K-Online.gif",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://www.mndaily.com",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"University_Student_Legal_Service_Banner.jpg",
+				fullFilePath:"/files/4214/5021/5018/University_Student_Legal_Service_Banner.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://usls.umn.edu/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				fullFilePath:"/files/8214/5341/5037/CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://www.minnesotaorchestra.org/buy/tickets/browse-calendar/eventdetail/594/-/inside-the-classics-hipster-vs-nerd?utm_source=radiok&utm_medium=banner&utm_campaign=studentrush_gopher#.Vp_LMOgrJD9",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"UMF-2015-blk-maroon-side_234x60.jpg",
+				fullFilePath:"/files/2914/5021/5018/UMF-2015-blk-maroon-side_234x60.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://z.umn.edu/callers",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"scrc.png",
+				fullFilePath:"/files/3414/4994/4619/scrc.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://www.sos.umn.edu",
+				groupSet:0,
+				imgHeight:43			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				fullFilePath:"/files/8214/5341/5037/CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://www.minnesotaorchestra.org/buy/tickets/browse-calendar/eventdetail/594/-/inside-the-classics-hipster-vs-nerd?utm_source=radiok&utm_medium=banner&utm_campaign=studentrush_gopher#.Vp_LMOgrJD9",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"the-whole.jpg",
+				fullFilePath:"/files/3214/5021/5018/the-whole.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sua.umn.edu/whole/about/history/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"UMF-2015-blk-maroon-side_234x60.jpg",
+				fullFilePath:"/files/2914/5021/5018/UMF-2015-blk-maroon-side_234x60.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://z.umn.edu/callers",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				fullFilePath:"/files/8214/5341/5037/CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://www.minnesotaorchestra.org/buy/tickets/browse-calendar/eventdetail/594/-/inside-the-classics-hipster-vs-nerd?utm_source=radiok&utm_medium=banner&utm_campaign=studentrush_gopher#.Vp_LMOgrJD9",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"RADIOK_LOGO2.jpg",
+				fullFilePath:"/files/3914/4227/5970/RADIOK_LOGO2.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://ascendprocoach.com/",
+				groupSet:0,
+				imgHeight:201			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"University_Student_Legal_Service_Banner.jpg",
+				fullFilePath:"/files/4214/5021/5018/University_Student_Legal_Service_Banner.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://usls.umn.edu/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				fullFilePath:"/files/8214/5341/5037/CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://www.minnesotaorchestra.org/buy/tickets/browse-calendar/eventdetail/594/-/inside-the-classics-hipster-vs-nerd?utm_source=radiok&utm_medium=banner&utm_campaign=studentrush_gopher#.Vp_LMOgrJD9",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"UMF-2015-blk-maroon-side_234x60.jpg",
+				fullFilePath:"/files/2914/5021/5018/UMF-2015-blk-maroon-side_234x60.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://z.umn.edu/callers",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"LACwebtile.png",
+				fullFilePath:"/files/8914/4961/1609/LACwebtile.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://umabroad.umn.edu/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				fullFilePath:"/files/8214/5341/5037/CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://www.minnesotaorchestra.org/buy/tickets/browse-calendar/eventdetail/594/-/inside-the-classics-hipster-vs-nerd?utm_source=radiok&utm_medium=banner&utm_campaign=studentrush_gopher#.Vp_LMOgrJD9",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"whole.gif",
+				fullFilePath:"/files/6512/8997/3728/whole.gif",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://www.coffman.umn.edu/whole/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"UMF-2015-blk-maroon-side_234x60.jpg",
+				fullFilePath:"/files/2914/5021/5018/UMF-2015-blk-maroon-side_234x60.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://z.umn.edu/callers",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				fullFilePath:"/files/8214/5341/5037/CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://www.minnesotaorchestra.org/buy/tickets/browse-calendar/eventdetail/594/-/inside-the-classics-hipster-vs-nerd?utm_source=radiok&utm_medium=banner&utm_campaign=studentrush_gopher#.Vp_LMOgrJD9",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"scrc.png",
+				fullFilePath:"/files/3414/4994/4619/scrc.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://www.sos.umn.edu",
+				groupSet:0,
+				imgHeight:43			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"University_Student_Legal_Service_Banner.jpg",
+				fullFilePath:"/files/4214/5021/5018/University_Student_Legal_Service_Banner.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://usls.umn.edu/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				fullFilePath:"/files/8214/5341/5037/CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://www.minnesotaorchestra.org/buy/tickets/browse-calendar/eventdetail/594/-/inside-the-classics-hipster-vs-nerd?utm_source=radiok&utm_medium=banner&utm_campaign=studentrush_gopher#.Vp_LMOgrJD9",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"UMF-2015-blk-maroon-side_234x60.jpg",
+				fullFilePath:"/files/2914/5021/5018/UMF-2015-blk-maroon-side_234x60.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://z.umn.edu/callers",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"University_Student_Legal_Service_Banner.jpg",
+				fullFilePath:"/files/4214/5021/5018/University_Student_Legal_Service_Banner.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://usls.umn.edu/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				fullFilePath:"/files/8214/5341/5037/CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://www.minnesotaorchestra.org/buy/tickets/browse-calendar/eventdetail/594/-/inside-the-classics-hipster-vs-nerd?utm_source=radiok&utm_medium=banner&utm_campaign=studentrush_gopher#.Vp_LMOgrJD9",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"the-whole.jpg",
+				fullFilePath:"/files/3214/5021/5018/the-whole.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sua.umn.edu/whole/about/history/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"resized.png",
+				fullFilePath:"/files/3614/4919/0224/resized.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://www1.umn.edu/aurora/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				fullFilePath:"/files/8214/5341/5037/CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://www.minnesotaorchestra.org/buy/tickets/browse-calendar/eventdetail/594/-/inside-the-classics-hipster-vs-nerd?utm_source=radiok&utm_medium=banner&utm_campaign=studentrush_gopher#.Vp_LMOgrJD9",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"UMF-2015-blk-maroon-side_234x60.jpg",
+				fullFilePath:"/files/2914/5021/5018/UMF-2015-blk-maroon-side_234x60.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://z.umn.edu/callers",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"University_Student_Legal_Service_Banner.jpg",
+				fullFilePath:"/files/4214/5021/5018/University_Student_Legal_Service_Banner.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://usls.umn.edu/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				fullFilePath:"/files/8214/5341/5037/CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://www.minnesotaorchestra.org/buy/tickets/browse-calendar/eventdetail/594/-/inside-the-classics-hipster-vs-nerd?utm_source=radiok&utm_medium=banner&utm_campaign=studentrush_gopher#.Vp_LMOgrJD9",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"LACwebtile.png",
+				fullFilePath:"/files/8914/4961/1609/LACwebtile.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://umabroad.umn.edu/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"University_Student_Legal_Service_Banner.jpg",
+				fullFilePath:"/files/4214/5021/5018/University_Student_Legal_Service_Banner.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://usls.umn.edu/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				fullFilePath:"/files/8214/5341/5037/CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://www.minnesotaorchestra.org/buy/tickets/browse-calendar/eventdetail/594/-/inside-the-classics-hipster-vs-nerd?utm_source=radiok&utm_medium=banner&utm_campaign=studentrush_gopher#.Vp_LMOgrJD9",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"UMF-2015-blk-maroon-side_234x60.jpg",
+				fullFilePath:"/files/2914/5021/5018/UMF-2015-blk-maroon-side_234x60.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://z.umn.edu/callers",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"University_Student_Legal_Service_Banner.jpg",
+				fullFilePath:"/files/4214/5021/5018/University_Student_Legal_Service_Banner.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://usls.umn.edu/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				fullFilePath:"/files/8214/5341/5037/CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://www.minnesotaorchestra.org/buy/tickets/browse-calendar/eventdetail/594/-/inside-the-classics-hipster-vs-nerd?utm_source=radiok&utm_medium=banner&utm_campaign=studentrush_gopher#.Vp_LMOgrJD9",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"RADIOK_LOGO1.jpg",
+				fullFilePath:"/files/8014/4227/5957/RADIOK_LOGO1.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://ascendprocoach.com/",
+				groupSet:0,
+				imgHeight:201			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"scrc.png",
+				fullFilePath:"/files/3414/4994/4619/scrc.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://www.sos.umn.edu",
+				groupSet:0,
+				imgHeight:43			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				fullFilePath:"/files/8214/5341/5037/CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://www.minnesotaorchestra.org/buy/tickets/browse-calendar/eventdetail/594/-/inside-the-classics-hipster-vs-nerd?utm_source=radiok&utm_medium=banner&utm_campaign=studentrush_gopher#.Vp_LMOgrJD9",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"University_Student_Legal_Service_Banner.jpg",
+				fullFilePath:"/files/4214/5021/5018/University_Student_Legal_Service_Banner.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://usls.umn.edu/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"UMF-2015-blk-maroon-side_234x60.jpg",
+				fullFilePath:"/files/2914/5021/5018/UMF-2015-blk-maroon-side_234x60.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://z.umn.edu/callers",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				fullFilePath:"/files/8214/5341/5037/CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://www.minnesotaorchestra.org/buy/tickets/browse-calendar/eventdetail/594/-/inside-the-classics-hipster-vs-nerd?utm_source=radiok&utm_medium=banner&utm_campaign=studentrush_gopher#.Vp_LMOgrJD9",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"University_Student_Legal_Service_Banner.jpg",
+				fullFilePath:"/files/4214/5021/5018/University_Student_Legal_Service_Banner.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://usls.umn.edu/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"the-whole.jpg",
+				fullFilePath:"/files/3214/5021/5018/the-whole.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sua.umn.edu/whole/about/history/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				fullFilePath:"/files/8214/5341/5037/CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://www.minnesotaorchestra.org/buy/tickets/browse-calendar/eventdetail/594/-/inside-the-classics-hipster-vs-nerd?utm_source=radiok&utm_medium=banner&utm_campaign=studentrush_gopher#.Vp_LMOgrJD9",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"University_Student_Legal_Service_Banner.jpg",
+				fullFilePath:"/files/4214/5021/5018/University_Student_Legal_Service_Banner.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://usls.umn.edu/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"UMF-2015-blk-maroon-side_234x60.jpg",
+				fullFilePath:"/files/2914/5021/5018/UMF-2015-blk-maroon-side_234x60.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://z.umn.edu/callers",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				fullFilePath:"/files/8214/5341/5037/CL-1516-047-Radio-K-Web-Tile-Feb12.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://www.minnesotaorchestra.org/buy/tickets/browse-calendar/eventdetail/594/-/inside-the-classics-hipster-vs-nerd?utm_source=radiok&utm_medium=banner&utm_campaign=studentrush_gopher#.Vp_LMOgrJD9",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Chankfonts.jpg",
+				fullFilePath:"/files/7014/5393/9037/Chankfonts.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://chank.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"SheRockSheRock.jpg",
+				fullFilePath:"/files/5414/5643/7933/SheRockSheRock.jpg",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://sherocksherock.org/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"wwhtcsmalllogo.png",
+				fullFilePath:"/files/9714/5928/5216/wwhtcsmalllogo.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://wholewomanshealth.com/",
+				groupSet:0,
+				imgHeight:60			}
+		,			{
+				fileName:"Wake_Ad_8-28-14.png",
+				fullFilePath:"/files/1714/0926/8710/Wake_Ad_8-28-14.png",
+				duration:5,
+				fadeDuration:2,		
+				url:"http://www.wakemag.org/",
+				groupSet:0,
+				imgHeight:61			}
+			]
+}
+$(function(){ccmSlideShowHelper16870.init();}); 
+//]]>
+</script>
+
+<div id="ccm-SlideshowBlock-display16870" style="height:201px" class="ccm-SlideshowBlock-display">
+<div id="ccm-SlideshowBlock-heightSetter16870" class="ccm-SlideshowBlock-heightSetter"></div>
+<div class="ccm-SlideshowBlock-clear" ></div>
+</div>
+	<div id="blockStyle15313Main631" class="grey-bar ccm-block-styles" >
+</div>
+<div id="HTMLBlock15312" class="HTMLBlock">
+<a class="twitter-timeline" href="https://twitter.com/RadioK" data-widget-id="352116277780836352">Tweets by @RadioK</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</div>	<div id="blockStyle16099Main631" class="grey-bar ccm-block-styles" >
+</div>
+<div id="HTMLBlock16487" class="HTMLBlock">
+<div class="boxed topbox">
+<h2>WEEKLY MIXTAPE</h2>
+</div>
+<iframe src="https://embed.spotify.com/?uri=spotify%3Auser%3Aradiok770%3Aplaylist%3A1ey72VFZ6mmh1QuVAh0Zng" width="230" height="310" frameborder="0" allowtransparency="true"></iframe>
+
+<br />
+
+<div align="center">
+<h4><a title="See it on Spotify" href="https://play.spotify.com/user/radiok770/playlist/1ey72VFZ6mmh1QuVAh0Zng">See it on Spotify</a></h4>
+</div></div>	</div>
+	
+	<div id="shadow">
+		<div id="main">
+			<div id="content" class="clearfix">
+				
+<div class="faq_item">
+	<div class="faq_heading"><h2>What is Radio K?</h2></div>
+	<div class="faq_content"><p>Real College Radio - Radio K, the award-winning radio station of the University of Minnesota, is nationally recognized as one of the best student-run college radio stations in the country, playing an eclectic variety of independent music both old and new.<br /><br />Radio K educates students, breaks ground in musical programming, and provides cutting-edge cultural coverage through our specialty shows, web content and Culture Queue.</p></div>
+</div>
+
+<div class="faq_item">
+	<div class="faq_heading"><h2>Seeing the old feed?</h2></div>
+	<div class="faq_content"><p>Yes, this is the FAQs page that was packaged with the app.</p></div>
+</div>
+
+<div class="faq_item">
+	<div class="faq_heading"><h2>How can I contact Radio K?</h2></div>
+	<div class="faq_content"><p>Email: <a href="mailto:radiok@umn.edu">radiok@umn.edu</a><br /><br />Phone: <a href="tel:+16126253500">612-625-3500</a><br /><br />Web: <a href="http://www.radiok.org/">www.radiok.org</a><br /><br />Mobile:<br /><a href="http://twitter.com/radiok"><img src="social/twitter.png" alt="" width="socialSize" height="socialSize" /></a> <a href="https://www.facebook.com/20658369592"><img src="social/facebook.png" alt="" width="socialSize" height="socialSize" /></a> <a href="http://www.youtube.com/user/RadioK770?feature=watch"><img src="social/youtube.png" alt="" width="socialSize" height="socialSize" /></a> <a href="https://plus.google.com/u/0/106019319997650127214/about"><img src="social/googleplus.png" alt="" width="socialSize" height="socialSize" /></a> <!--<a href="http://www.radiok.org/blogs/new/tag/track%20of%20the%20day"><img src="social/rss.png" alt="" width="socialSize" height="socialSize" /></a>--></p></div>
+</div>
+
+<div class="faq_item">
+	<div class="faq_heading"><h2>How can I keep Radio K playing music?</h2></div>
+	<div class="faq_content"><p>You can keep your already rad support going by <a href="http://www.radiok.org/donate/">donating</a> to the station and becoming a member. And, we like to keep it chill so donating literally any amount makes you a member. Got a spare $10? Throw it our way and we can keep the CDs spinning.</p></div>
+</div>
+
+<div class="faq_item">
+	<div class="faq_heading"><h2>How do I get my band&apos;s music on Radio K?</h2></div>
+	<div class="faq_content"><p>Head over to <a href="http://www.radiok.org/about/contact-information/music-submissions/">RadioK.org</a></p></div>
+</div>
+
+<div class="faq_item">
+	<div class="faq_heading"><h2>How can I download Radio K podcasts?</h2></div>
+	<div class="faq_content"><p>Radio K's podcast feeds can be found in this app by clicking the MORE button, then EXTRAS.  Pick an episode to listen or click the SUBSCRIBE button to add your device's podcast player.</p></div>
+</div>
+
+<div class="faq_item">
+	<div class="faq_heading"><h2>What cool things do you have going on?</h2></div>
+	<div class="faq_content"><p>We love live music even more than we love recorded music—check out our <a href="http://www.radiok.org/events/">Events Calendar</a>.</p></div>
+</div>
+
+<div class="faq_item">
+	<div class="faq_heading"><h2>When is that awesome local show,<br>Off The Record?</h2></div>
+	<div class="faq_content"><p>Off The Record is every Friday from 3 p.m. to 5 p.m. CST. Local music and local trivia comin' at you for two hours, not to mention an interview and studio session with a local band during each show!</p></div>
+</div>
+
+<div class="faq_item">
+	<div class="faq_heading"><h2>You wanna be a DJ, too?</h2></div>
+	<div class="faq_content"><p>University of Minnesota student taking 1 credit or more? If so then just email <a href="mailto:volunteer@radiok.org">volunteer@radiok.org</a> and you'll be on your way to becoming a rich, fabulous, glamorous DJ. (OK, we know those adjectives are, like, kind of an exaggeration but whatever, right?)</p></div>
+</div>
+
+<div class="faq_item">
+	<div class="faq_heading"><h2>Your Mom listens to commercial radio.<br>What&apos;s the deal with that?</h2></div>
+	<div class="faq_content"><p>You heard wrong—our moms totally listen to us. They appreciate the fact that we're trying to keep 'em "hip and groovy" (their words, not ours). Real College Radio is for the cutting edge, the risk takers, the people who know that music matters most. That's you. That's us. That's them—'cause we've taught our mothers well.</p></div>
+</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="sidebar_shadow">
+		<div id="sidebar" class="clearfix">
+			
+<div id="HTMLBlock9922" class="HTMLBlock">
+<div id="become-a-member" class="blue clearfix">
+<h2 class="plain"><a href="/donate/" class="plain">Donate</a></h2>
+</div></div>	<div id="blockStyle15314Main631" class="grey-bar ccm-block-styles" >
+</div>	<div id="blockStyle16931Main638" class="boxed topbox ccm-block-styles" >
+<h2>THE HITLIST<span style="font-size: 10px;"> </span><span style="font-size: 10px;"> </span></h2>
+<div><span><span>1. <strong>THOMAS MUDRICK</strong>- Soul Glow</span></span>
+<div>2. <strong>BOULEVARDS</strong> - Cold Call</div>
+<div>3. <strong>KITTEN FOREVER</strong> - 200X</div>
+<div>4. <strong>CULLEN OMORI</strong> - Hey Girl</div>
+<div>5. <strong>MARK MALLMAN</strong> - Parasite Eyes</div>
+<div>6. <strong>LIONLIMB</strong> -Ride</div>
+<span>7. <strong>THE RANGE</strong> - Florida<br /></span></div></div>	<div id="blockStyle15336Main639" class="boxed ccm-block-styles" >
+
+<div class="ccm-page-list" style="background-color:#fff;">
+
+	
+</div><!-- end .ccm-page-list --></div>	<div id="blockStyle15337Main640" class="boxed bottombox ccm-block-styles" >
+<p style="padding-top: 0.75em;"><strong style="font-size: 14px;"><em><a href="/top7/">The Hitlist »</a></em></strong></p></div>	<div id="blockStyle15315Main631" class="grey-bar ccm-block-styles" >
+</div>	<div id="blockStyle15364Main648" class="boxed solobox ccm-block-styles" >
+	<h2>In-studios</h2>
+	<div style="text-align:center;">
+	<a href="/instudios/the-controversial-new-skinny-pill-otr/"><img src="/files/2214/6134/7573/new_skinny_pill.jpg" alt="The Controversial New 'Skinny Pill'" width="270" /></a><br><a href="/instudios/the-controversial-new-skinny-pill-otr/"><h4>The Controversial New 'Skinny Pill'</h4></a>Apr 15, 2016<br /></div>	</div>	<div id="blockStyle15363Main631" class="grey-bar ccm-block-styles" >
+</div>	<div id="blockStyle15394Main642" class="boxed solobox ccm-block-styles" >
+
+<div class="ccm-page-list" style="background-color:#fff;">
+
+			<div class="ccm-page-list-description" style="text-align:center;padding-top:10px;padding-bottom:10px;">
+			<a href="/realcollegepodcast/anonymous/" target="_self">
+			<img class="ccm-output-thumbnail" alt="" src="/files/cache/e7b6c35bf7442c30ad5805d62522e5a3_f16009.png" width="249" height="250" />			<div style="padding-top:10px;width:250px; margin: 0px auto;">
+			</a>
+			<h2>Real College Podcast</h2>
+			<b>Anonymous</b>
+			<br>
+			<i>We’re talking about what it is to be anonymous. To be a figure in the shadows, serving a community that doesn’t thank you. To go to bed at night believing its
+To not ask for gratitude, to be selfless and get satisfaction from the action, not the appreciation. Jackie Renzetti strikes a chord with the piano players of Coffman and Max Fuller cleans up the streets with a real life superhero. Also we hear the Word on the Street with Matthew Curtis, and the Radio K Weekly Release Spotlight.</i>
+			</div>
+					</div>
+		
+	
+
+	
+</div><!-- end .ccm-page-list -->
+
+
+</div>	<div id="blockStyle15316Main631" class="grey-bar ccm-block-styles" >
+</div>	<div id="blockStyle15365Main649" class="boxed topbox ccm-block-styles" >
+<h2><span style="color: #000000;"><a href="http://www.radiok.org/events/"><span style="color: #000000;">EVENTS</span></a></span></h2></div>	<div id="blockStyle15341Main645" class="boxed bottombox ccm-block-styles" >
+		<div class="ccm-page-list">
+						<div class="smallcal" style="float: none; clear: none; display: inline-block; padding-top: 0;">
+						<div class="infowrap" style="margin-left: 0px; float: none;">
+							<div class="titlehead">
+								<div class="title" style="font-size: 14px;">
+									<div class="time" style="font-size: 10px;">
+									 3:00 pm<br/>									</div>
+								05.01.16 - <a href="/events/night-remember-prom/?eID=677">A Night to Remember Prom</a>								</div>
+								
+															   	<div class="local">
+																	</div>
+							</div>
+						</div>
+					</div>
+										<div class="smallcal" style="float: none; clear: none; display: inline-block;">
+						<div class="infowrap" style="margin-left: 0px; float: none;">
+							<div class="titlehead">
+								<div class="title" style="font-size: 14px;">
+									<div class="time" style="font-size: 10px;">
+									 6:00 pm<br/>									</div>
+								05.01.16 - <a href="/events/world-beautiful-place-and-i-am-no-longer-afraid-die/?eID=737">The World Is A Beautiful Place and I Am No Longer Afraid To Die</a>								</div>
+								
+																											<div style="background-color: #54b0cc;" class="category_color">Music!</div>
+																			<div style="background-color: #54b0cc;" class="category_color">K-Sponsored!</div>
+																								   	<div class="local">
+									Triple Rock Social Club								</div>
+							</div>
+						</div>
+					</div>
+										<div class="smallcal" style="float: none; clear: none; display: inline-block;">
+						<div class="infowrap" style="margin-left: 0px; float: none;">
+							<div class="titlehead">
+								<div class="title" style="font-size: 14px;">
+									<div class="time" style="font-size: 10px;">
+									 5:00 pm<br/>									</div>
+								05.02.16 - <a href="/events/ladakh-spirit-place/?eID=662">Ladakh: A Spirit of Place</a>								</div>
+								
+																											<div style="background-color: #54b0cc;" class="category_color">Art!</div>
+																								   	<div class="local">
+									Goldstein Museum of Design								</div>
+							</div>
+						</div>
+					</div>
+										<div class="smallcal" style="float: none; clear: none; display: inline-block;">
+						<div class="infowrap" style="margin-left: 0px; float: none;">
+							<div class="titlehead">
+								<div class="title" style="font-size: 14px;">
+									<div class="time" style="font-size: 10px;">
+									 6:00 pm<br/>									</div>
+								05.06.16 - <a href="/events/take-back-night/?eID=738">Take Back the Night</a>								</div>
+								
+																											<div style="background-color: #54b0cc;" class="category_color">Music!</div>
+																			<div style="background-color: #54b0cc;" class="category_color">K-Sponsored!</div>
+																								   	<div class="local">
+									MCTC								</div>
+							</div>
+						</div>
+					</div>
+										<div class="smallcal" style="float: none; clear: none; display: inline-block;">
+						<div class="infowrap" style="margin-left: 0px; float: none;">
+							<div class="titlehead">
+								<div class="title" style="font-size: 14px;">
+									<div class="time" style="font-size: 10px;">
+									 7:00 pm<br/>									</div>
+								05.10.16 - <a href="/events/mild-high-club/?eID=696">Mild High Club</a>								</div>
+								
+																											<div style="background-color: #54b0cc;" class="category_color">Music!</div>
+																								   	<div class="local">
+									Amsterdam Bar & Hall								</div>
+							</div>
+						</div>
+					</div>
+										<div class="smallcal" style="float: none; clear: none; display: inline-block; border-bottom: none;">
+						<div class="infowrap" style="margin-left: 0px; float: none;">
+							<div class="titlehead">
+								<div class="title" style="font-size: 14px;">
+									<div class="time" style="font-size: 10px;">
+									 7:30 pm<br/>									</div>
+								05.13.16 - <a href="/events/devendra-banhart/?eID=510">Devendra Banhart</a>								</div>
+								
+																											<div style="background-color: #54b0cc;" class="category_color">K-Sponsored </div>
+																			<div style="background-color: #54b0cc;" class="category_color">Liquid Music</div>
+																								   	<div class="local">
+									Walker								</div>
+							</div>
+						</div>
+					</div>
+						</div>
+	<br style="clear: both;"/>
+</div>	<div id="blockStyle15317Main631" class="grey-bar ccm-block-styles" >
+</div>	<div id="blockStyle16811Main646" class="boxed solobox ccm-block-styles" >
+<h2>Radio K Newsletter</h2>
+<p>For exclusive news and offers from the station you love:</p>
+<ul>
+<li><a title="Subscribe :)" href="http://www.radiok.org/newsletter/">Subscribe to Radio K's monthly newsletter!</a></li>
+<li><a title="May Take Some Time." href="https://bos.etapestry.com/prod/viewEmailAsPage.do?personaRef=531.0.13004842&amp;databaseId=KUOM&amp;memberId=1148595798&amp;jobRef=531.0.155007011&amp;mailingId=31529113&amp;erRef=531.0.13004840&amp;key=d7363894acdee742caf7fe4e97c4d49" target="_blank">View </a>the current newsletter as a webpage</li>
+</ul></div>		</div>
+	</div>
+</div>
+<div id="footerbg">
+	<div id="footer">
+		<div id="logos">
+			<akz><p style="font-size:120% !important;color:#FFF !important; line-height:1.2em !important">
+				Radio K - KUOM is the award-winning student-run radio station of the University of Minnesota, playing an eclectic variety of independent music both old and new.<br />
+				<br />Radio K - KUOM
+				<br />Real College Radio
+				<br />330 21st Ave S, 610 Rarig Center
+				<br />Minneapolis, MN 55455</p></akz>
+			<div id="logos-images" style="float: none; width: 100%">
+				<a href="http://www.umn.edu"><img src="/themes/radiok/images/footer-umn.gif" alt="University of Minnesota" /></a>
+				<a href="http://cce.umn.edu"><img src="/themes/radiok/images/footer-cce.gif" alt="College of Continuing Education" /></a>
+				<a href="http://www.ampers.org/"><img src="/themes/radiok/images/footer-ampers.png" alt="Ampers" /></a>
+				<a href="http://www.legacy.leg.mn/"><img src="/themes/radiok/images/Legacy-logo_BWreverse_horz.png" alt="Minnesota Arts and Cultural Heritage Fund" height="60"/></a>
+			</div>
+			<akz><p style="font-family:helvetica;text-align: left; color: #FFF; font-size:80% !important;color:#FFF !important; line-height:12px !important; text-align: center;">
+				<br/>&copy; 2016 Regents of the University of Minnesota. All rights reserved. <br/>
+			The University of Minnesota is an equal opportunity educator and employer</p></akz>
+		</div>
+	</div>
+</div>
+<script type="text/javascript"> Cufon.now(); </script>
+<style type="text/css">h1,h2,h3{ visibility : visible }</style>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1913996-4']);
+  _gaq.push(['_trackPageview']);
+  _gaq.push(['_trackPageLoadTime']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script><script type="text/javascript" src="/updates/concrete5.6.1.2/concrete/js/bootstrap.js?v=1133b281fd57582b17a8da2a9332f503"></script>
+<script type="text/javascript" src="/updates/concrete5.6.1.2/concrete/js/jquery.ui.js?v=1133b281fd57582b17a8da2a9332f503"></script>
+<script type="text/javascript" src="/updates/concrete5.6.1.2/concrete/js/ccm.app.js?v=1133b281fd57582b17a8da2a9332f503"></script>
+<script type="text/javascript" src="/updates/concrete5.6.1.2/concrete/js/tiny_mce/tiny_mce.js?v=1133b281fd57582b17a8da2a9332f503"></script>
+</body>
+</html>

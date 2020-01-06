@@ -1,0 +1,2806 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>KUOM Radio K</title>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.01,minimal-ui">
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap:; script-src * data: https://ssl.gstatic.com 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' *; connect-src *">
+
+
+<script src="cordova.js"></script>
+<script src="jquerymin.js"></script>
+<script src="scrollfix.js"></script>
+<script src="pages.js?3"></script>
+<script src="handlebutton.js"></script>
+<link rel="stylesheet" type="text/css" href="reset-min.css">
+<link rel="stylesheet" type="text/css" href="radiokapp.css?4">
+
+<script>
+
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics_debug.js','ga');
+
+  //var clientId = ga.getAll()[0].get('clientId');
+/*
+   ga('create', 'UA-149845458-1', {
+       'clientId': clientId
+   });
+*/
+ga('create', 'UA-149845458-1', 'auto');
+ga('set', 'checkProtocolTask', function(){ /* nothing */ });
+ga('set','anonymizeIp',true);
+ga('set','forceSSL',true);
+</script>
+
+<script type="text/javascript">
+
+document.addEventListener("deviceready", onDeviceReady, false);
+
+var state={
+"android":false,
+"ios":false,
+"deviceReady":false,
+"appActive":false,
+"online":false,
+"internet":false,
+"uiPlaying":false,
+"streamCreated":false,
+"buffering":false,
+"streamPlaying":false,
+"remotePaused":false,
+"alarmSet":false,
+"alarmTriggered":false,
+"retryAttempts":0,
+"audioCount":0,
+"waitEvents":0,
+"loop":false,
+"playerType":"",
+"mediaStatus":-1,
+"errorPause":false
+}
+var stateKeys=Object.keys(state);
+var staleStack=[];
+
+var myStreamUrl="";
+var stream={};
+/*
+      // html5 audio
+
+      stream.abort = null;
+      stream.emptied = null;
+      stream.error = null;
+      stream.epause = null;
+      stream.seeking = null;
+      stream.ended = null;
+      stream.stalled = null;
+      stream.waiting = null;
+      stream.play = null;
+      stream.playing = null;
+*/
+
+var debugging=false;
+var waitEvents=0;
+var waitTimeout;
+
+var retryInterval;
+var bufferTimeout;
+var minuteInterval;
+var songs=[];
+
+var hideTimeout;
+var initHistory=[0,0,0,0,0,0,0,0];
+var prevDeltaY=0;
+var currentPage="";
+var snoozeMinutes=0;
+var dials=[];
+
+var ww=300;
+var wh=400;
+var leftOffset=0;
+var topOffset=0;
+var grid=32;
+var navDelay=100;
+var imagePath="images_small";
+
+var selectedTwistie=-1;
+
+var hideByPage={};
+var buttonMap=[];
+var pageArray=[];
+var heightsByPage={};
+
+var touchingDial=-1;
+var touching=false;
+var touchTimeout
+
+var resultsHolderScroll;
+var calendarHolderScroll;
+var playlistHolderScroll;
+var minuteMs=60000;
+var lastTouchId="";
+var alarmIncDec=1;
+var mouseX=0;
+var mouseY=0;
+var mouseStartX=0;
+var mouseStartY=0;
+var alarmFailsafeTimeout;
+
+//new test urls
+
+var urlByQuality={
+  "low":"http://204.93.226.26:7810/;",
+  "medium":"http://204.93.226.26:7810/;",
+  "high":"http://204.93.226.26:7810/;",
+  "higher":"http://204.93.226.26:7810/;",
+  "broken":"http://204.93.226.26:7810/;"
+};
+/*
+texas test passed
+var urlByQuality={
+  "low":"http://peridot.streamguys.com:7810/live-mp3",
+  "medium":"http://peridot.streamguys.com:7810/live-mp3",
+  "high":"http://peridot.streamguys.com:7810/live-mp3",
+  "higher":"http://peridot.streamguys.com:7810/live-mp3",
+  "broken":"http://peridot.streamguys.com:7810/live-mp3"
+};
+//http://peridot.streamguys.com:7810/live-mp3
+*/
+//http://128.101.73.38:8256/
+
+
+//http://somafm.com/dronezone.pls
+//http://wtbu.bu.edu:1800/listen.m3u
+
+
+var secondInterval;
+var sleepSeconds=0;
+var dialInterval;
+var stateInterval;
+var eventStack=[];
+var recentSong={};
+var nowData={"dj":"", "show":"", "time":"", "artist":"", "song":"", "album":""};
+var recentSongs={};
+var singMedia;
+
+var kscDownloads=[];
+var instDownloads=[];
+//var rksDownloads=[];
+var wrsDownloads=[];
+var rcpDownloads=[];
+
+//new
+var nowPlaying="";
+
+// state changing functions
+function checkInternet(){
+  //dbuga('checkInternet() '+state.online);
+  if(state.online==false){
+    state.internet=false;
+    return false;
+    }
+  $.ajax({
+    url: "https://www.radiok.org/tools/packages/page_list_teasers/podcast_rss?path=%2Frealcollegepodcast",
+    dataType: "xml",
+    async: false,
+    success: function(xml) {state.internet=true;},
+    error: function (textStatus, errorThrown) {
+                alert(JSON.stringify(textStatus));
+            }
+    });
+}
+function checkConnection() {
+  var con=navigator.connection.type;
+  //var con="wifi";// web testing only!
+  //dbuga("checkConnection() ...");
+  //dbuga("navigator.connection.type="+con);
+  if((con=="connection.NONE")||(con=="connection.UNKNOWN")){
+    state.online=false;
+    }
+  else{
+    state.online=true;
+    }
+  }
+
+
+function init(){
+  //dbuga('init()');
+  // onDeviceReady(); // web testing only!!
+  }
+
+
+var androidWaitMs=120000;
+var iosWaitMs=20000;
+var waitMs=iosWaitMs;
+function onDeviceReady(){
+  //dbuga("onDeviceReady()");
+  eventStack.push('device ready');
+  //document.addEventListener("offline", onOffline, false);
+  //document.addEventListener("online", onOnline, false);
+  document.addEventListener("resume", appResumed, false);
+  document.addEventListener("pause", appPaused, false);
+  //dbuga("onDeviceReady() 2");
+
+  if (device.platform == "iOS") {
+    state.ios=true;
+    state.playerType="audio";
+    waitMs=iosWaitMs;
+    }
+  else{//if (device.platform == "Android") {
+    state.android=true;
+    state.playerType="media";
+    waitMs=androidWaitMs;
+    }
+  //dbuga("onDeviceReady() 3");
+
+  state.deviceReady=true;
+  //dbuga("onDeviceReady() 4");
+  state.appActive=true;
+  //dbuga("onDeviceReady() 5");
+  checkConnection();
+  //dbuga("onDeviceReady() 6");
+  checkInternet();
+  //dbuga("onDeviceReady() 7");
+  resumeInit();
+  //dbuga("onDeviceReady()8");
+
+  }
+function appResumed(){
+  state.appActive=true;
+  //console.log("App resumed");
+  eventStack.push("App resumed");
+  if(state.uiPlaying==true){buttonOn("home", "playpause");}
+  StatusBar.hide();
+  populateFaqs();
+  }
+function appPaused(){
+  state.appActive=false;
+  eventStack.push("App paused");
+  }
+
+function stateTick(){
+  graphState();
+  processEvents();
+  }
+
+function mediaEvent(evt){
+  gbug('mediaEvent',evt);
+      //'media none', 'media starting', 'media running', 'media paused', 'media stopped';
+      if(evt=="media none"){
+        nowPlaying="no media?";
+        state.retryAttempts++;
+        var url=createStream();
+        evt+=" - createStream() "+url;
+        }
+      if(evt=="media starting"){
+        if(state.loop==false){
+          //nowPlaying="Connecting...";
+          if(state.waitEvents>0){nowPlaying="Retrying.";}
+          for(var w=0; w<state.waitEvents; w++){nowPlaying+=".";}
+          window.clearTimeout(waitTimeout);
+          waitTimeout=window.setTimeout("eventStack.push('wait timeout')", waitMs);
+          }
+        }
+      if(evt=="media running"){
+        bufferEnd();
+        state.streamPlaying=true;
+        getRecentSongJson();
+        window.clearTimeout(waitTimeout);
+        }
+      if(evt=="media paused"){
+        nowPlaying="";
+        window.clearTimeout(waitTimeout);
+        }
+      if(evt=="media stopped"){
+        //nowPlaying="Stopped";
+        if(state.loop){stream.play();}
+        window.clearTimeout(waitTimeout);
+        }
+  }
+
+function processEvents(){
+  if(state.errorPause){
+    //dbuga('errorPause');
+    return false;
+    }
+  state.errorPause=true;
+
+  if(eventStack.length>0){
+    //dbuga('processEvents() '+eventStack.join('|'));
+    var staleString=staleStack.join('<br />');
+    var eventStash=[];
+    for (var e=0; e<eventStack.length; e++){
+      var evt=eventStack[e];
+      eventStash.push(evt);
+      }
+    eventStack=[];
+    for (var e=0; e<eventStash.length; e++){
+      var evt=eventStash[e];
+      mediaEvent(evt);
+      if(evt.indexOf("audio stalled")>-1){
+        // stall from control center then resume leaves streamCreated false. Odd but no harm.
+        var parts=evt.split(" ");
+        var audioNum=Number(parts[2]);
+        if(audioNum==state.audioCount){
+          //if(state.remotePaused==false){state.streamCreated=false;}
+          //not sure why this instance don't play no more, actually from long pause.
+          //state.streamCreated=false;
+          //window.clearTimeout(waitTimeout);
+          //already delayed 5000
+          //checkInternet();
+          //state.streamPlaying=false;
+          evt+=" - current, ignore anyways";
+/*
+          if(state.uiPlaying){
+            nowPlaying="Stalled.";
+            if((state.internet==false)&&(state.online==true)){
+              nowPlaying+=" Connected but no internet.";
+              }
+            if((state.online==false)){
+              nowPlaying+=" No Connection.";
+              }
+            if((state.internet==true)&&(state.online==true)){
+              nowPlaying+=" Internet but no stream.";
+              }
+            }
+*/
+          }
+        else{
+          evt+=" - IGNORE";
+          }
+        }
+      if(evt.indexOf("audio pause")>-1){
+        var parts=evt.split(" ");
+        var audioNum=Number(parts[2]);
+        if(audioNum==state.audioCount){
+          window.clearTimeout(waitTimeout);
+          nowPlaying="Paused";
+          nowDj="";
+          if(state.uiPlaying){// REMOTE PAUSE
+            nowPlaying="Remote Paused";
+            state.remotePaused=true;
+            state.streamCreated=false;
+            state.streamPlaying=false;
+            state.uiPlaying=false;
+
+            nowPlaying+=".";
+            buttonOff('home', 'playpause');
+            evt+=" - remotePaused";
+            }
+          else{
+            evt+=" - normal";
+            nowPlaying="";
+            state.streamPlaying=false;
+            }
+          evt+=" - current";
+          }
+        else{
+          evt+=" - IGNORE";
+          }
+        }
+      if(evt.indexOf("audio error")>-1){
+        var parts=evt.split(" ");
+        var audioNum=Number(parts[2]);
+        if(audioNum==state.audioCount){
+          state.retryAttempts++;
+          var url=createStream();
+          evt+=" - MATCH createStream() "+url;
+          }
+        else{
+          evt+=" - IGNORE old object";
+          }
+        }
+      if((evt=="audio ended")&&(state.uiPlaying)){
+        evt+=" - playStream()";
+        //checkInternet();
+        playStream();
+        }
+      if(evt=="audio wait"){
+        bufferStart();
+        window.clearTimeout(waitTimeout);
+        waitTimeout=window.setTimeout("eventStack.push('wait timeout')", waitMs);
+        }
+      if(evt=="audio play"){
+        bufferEnd();
+
+        window.clearTimeout(waitTimeout);
+        waitTimeout=window.setTimeout("eventStack.push('wait timeout')", waitMs);
+        }
+      if(evt.indexOf("audio playing")>-1){
+        var parts=evt.split(" ");
+        var audioNum=Number(parts[2]);
+        if(audioNum==state.audioCount){
+          state.remotePaused=false;
+          evt+=" - current";
+          //dbuga('  processEvents so streamPlaying=true '+evt)
+          bufferEnd();
+          state.streamPlaying=true;
+          getRecentSongJson();
+          window.clearTimeout(waitTimeout);
+          if(state.internet==false){
+            checkInternet();
+            }
+
+          updateNowPlaying();
+          e=eventStash.length; //cease in case immediate play
+          }
+        else{
+          evt+=" - IGNORE old object";
+          }
+        }
+
+
+
+
+
+      if(evt=="ui play"){
+        //dbuga(' - in ui play 1');
+        bufferStart();
+        state.retryAttempts=0;
+        state.waitEvents=0;
+        state.remotePaused=false;
+        //dbuga(' - in ui play 2 ' + state.streamCreated);
+
+        if(state.streamCreated){
+          playStream();
+          evt+=" - playStream()";
+          //dbuga(' - in ui play 4 ' + state.streamCreated);
+          }
+        else{
+          var url=createStream();
+          evt+=" - createStream() "+url;
+          //dbuga(' - in ui play 6 ' + state.streamCreated);
+
+          }
+
+        e=eventStash.length; //cease in case of twitchy user
+        }
+      if(evt=="ui pause"){
+        //dbuga('ui pause 0');
+        bufferEnd();
+        //dbuga('ui pause 1');
+        nowPlaying="";
+        nowDj="";
+        pauseStream();
+        //dbuga('ui pause 2');
+        state.streamCreated=false;
+        evt+=" - set streamCreated=false";
+        //dbuga('ui pause 4');
+        e=eventStash.length; //cease in case of twitchy user
+        //dbuga('ui pause 5');
+        }
+
+
+
+      if((evt=="stream created")&&(state.uiPlaying)){
+        evt+=" - playStream()";
+        playStream();
+        }
+
+      if(evt.indexOf('setting')>-1){
+        if(state.streamPlaying){pauseStream();}// was stream.pause
+        if(state.uiPlaying){
+          state.streamCreated=false;
+          state.streamPlaying=false;
+          createStream();
+          }
+        }
+
+      if(evt=="alarm fired"){
+        state.alarmSet=false;
+        window.plugins.insomnia.allowSleepAgain();
+        state.alarmTriggered=true;
+        state.retryAttempts=0;
+        state.waitEvents=0;
+        state.uiPlaying=true;
+        buttonOn("home", "playpause");
+        checkInternet();
+        var url=createStream();
+        evt+=" - test internet then createStream() "+url;
+        }
+      if(evt=="sing timeout"){
+        //state.retryAttempts++;
+        pauseStream();
+        state.loop=false;
+        state.waitEvents=0;
+        if(state.uiPlaying){
+          checkInternet();
+          var url=createStream();
+          evt+=" - test internet then createStream() "+url;
+          }
+        }
+
+      if(evt=="wait timeout"){
+        if(state.streamPlaying==false){
+          nowPlaying="Retrying...";
+          nowDj="";
+          state.waitEvents++;
+          checkInternet();
+          var url=createStream();
+          evt+=" - test internet then createStream() "+url;
+          }
+        }
+
+
+
+
+      if(evt=="online true"){
+        if(state.uiPlaying){
+          var url=createStream();
+          evt+=" - createStream() "+url;
+          }
+        }
+      if(evt=="online false"){
+        nowPlaying="No Connection";
+        nowDj="";
+        state.streamPlaying==false;// activates wait timeout
+        state.streamCreated==false;// allows createStream
+        if(state.uiPlaying){
+          window.clearTimeout(waitTimeout);
+          waitTimeout=window.setTimeout("eventStack.push('wait timeout')", waitMs);
+          }
+
+
+        }
+
+      staleStack.unshift(evt);
+      //dbuga(" - evt:"+evt);
+      }
+    staleStack.unshift(" ");
+
+    //dbuga('<span id="stale" style="color:red; display inline-block;">'+staleString+'</span>');
+    //dbuga('end of processEvents() ')
+    }//end if event stack
+  document.getElementById('page_home_content_nowPlayingDiv').innerHTML=nowPlaying;
+  document.getElementById('page_home_content_djDiv').innerHTML=nowDj;
+  state.errorPause=false;
+
+  }
+function pauseStream(){
+  //dbuga('pauseStream() 0')
+  window.clearTimeout(waitTimeout);
+  state.streamPlaying=false;
+  if (typeof stream.pause == 'function'){
+    //dbuga(' - pauseStream() 1')
+    if(state.ios){stream.pause();}
+    if(state.android){stream.pause();}
+    //dbuga(' - pauseStream() 2')
+    }
+
+  if (typeof stream.release == 'function'){
+    //dbuga(' - pauseStream() 3')
+    if(state.playerType=="media"){
+      //dbuga(' -- stream.release() 3.1')
+      stream.release();
+      //dbuga(' -- stream.release() 3.2')
+      }
+    }
+  else{
+    //dbuga('no release()');
+    }
+  //dbuga(' - pauseStream() 4')
+
+  }
+function playStream(){
+    //dbuga('playStream()');
+  if (typeof stream.play == 'function'){
+    if(state.ios){stream.play();}
+    if(state.android){stream.play();}
+    }
+  }
+var singTimeout;
+function gbug(category, action){
+
+  var platform="browser";
+  if(state.android){platform="android";}
+  if(state.ios){platform="ios";}
+
+
+  ga('send','event',{'eventCategory':platform,'eventAction':action,'eventLabel':'Random','eventValue':rnd(9999)});
+}
+function rnd(range){
+  return Math.floor(Math.random()*range);
+}
+function createStream(){
+  nowPlaying="Create Stream";
+  state.loop=false;
+  myStreamUrl=urlByQuality[genericGet("quality")]+"";
+
+  if((state.waitEvents>4)||(state.retryAttempts>0)||(state.internet==false)||(state.online==false)){
+    if(state.waitEvents>4){
+      nowPlaying="Timed out, no stream";
+      nowDj="";
+      }
+
+    state.retryAttempts=0;
+    state.waitEvents=0;
+    if(state.android){
+      myStreamUrl="/android_asset/www/sounds/singing.mp3";
+      }
+    if(state.ios){
+      myStreamUrl="sounds/singing.mp3";
+      }
+    state.loop=true;
+    window.clearTimeout(singTimeout);
+    singTimeout=window.setTimeout("eventStack.push('sing timeout')", 10000);
+    if((state.online==true)&&(state.internet==false)){
+      nowPlaying="Online but no internet";
+      nowDj="";
+      }
+    if((state.online==true)&&(state.internet==false)){
+      nowPlaying="No Connection";
+      nowDj="";
+      }
+    gbug('createStream', nowPlaying)
+
+    }
+  else{// try stream
+    //nowPlaying="Connecting...";
+    nowDj="";
+    }
+  // url figured out now go
+  if(state.playerType=="audio"){
+    if(state.streamCreated){
+      pauseStream();// was stream.pause
+      }
+
+    stream = null;
+    eventStack.push("stream nullified");
+    stream = new Audio(myStreamUrl);
+    state.audioCount++;
+    var audioCount=state.audioCount;
+
+    stream.audioNum=state.audioCount;
+    stream.loop = state.loop;
+    stream.addEventListener("abort", function() {
+       state.streamPlaying=false;
+       eventStack.push('audio abort');
+    }, false);
+    stream.addEventListener("emptied", function() {
+       state.streamPlaying=false;
+       eventStack.push('audio emptied');
+       gbug('createStream', 'audioEmptied');
+    }, false);
+
+    stream.addEventListener("error", function() {
+       if(state.streamPlaying==false){// may be called by ghosts
+         //eventStack.push('audio error '+event.target.audioNum);
+         gbug('createStream', 'audioError '+event.target.audioNum);
+
+       }
+    }, false);
+
+    stream.addEventListener('error', function failed(e) {
+   // audio playback failed - show a message saying why
+   // to get the source of the audio element use $(this).src
+   switch (e.target.error.code) {
+     case e.target.error.MEDIA_ERR_ABORTED:
+       //dbuga('You aborted the video playback.');
+       break;
+     case e.target.error.MEDIA_ERR_NETWORK:
+       //dbuga('A network error caused the audio download to fail.');
+       break;
+     case e.target.error.MEDIA_ERR_DECODE:
+       //dbuga('The audio playback was aborted due to a corruption problem or because the video used features your browser did not support.');
+       break;
+     case e.target.error.MEDIA_ERR_SRC_NOT_SUPPORTED:
+       //dbuga('The video audio not be loaded, either because the server or network failed or because the format is not supported.');
+       break;
+     default:
+       //dbuga('An unknown error occurred.');
+       break;
+   }
+ }, true);
+
+
+
+
+    stream.addEventListener("pause", function(theVar) {
+      return function(){pausedFunction(theVar)};
+    }(audioCount), false);
+
+    stream.addEventListener("seeking", function() {
+       state.streamPlaying=false;
+       eventStack.push('audio seeking');
+       gbug('createStream', 'audio seeking ');
+    }, false);
+    stream.addEventListener("ended", function() {
+       state.streamPlaying=false;
+       eventStack.push('audio ended');
+       gbug('createStream', 'audio ended ');
+    }, false);
+
+
+    stream.addEventListener("stalled", function(theVar) {
+      return function(){stalledFunction(theVar)};
+    }(audioCount), false);
+
+
+    stream.addEventListener("waiting", function() {
+       state.streamPlaying=false;
+       eventStack.push('audio wait');
+       gbug('createStream', 'audio wait ');
+
+    }, false);
+    stream.addEventListener("play", function() {
+       state.streamPlaying=false;
+       eventStack.push('audio play');
+       gbug('createStream', 'audio play ');
+
+    }, false);
+
+/*
+       if(state.remotePaused){
+         stream=event.target;
+         }
+*/
+
+    stream.addEventListener("playing", function(theVar) {
+      return function(){
+        playingFunction(theVar)
+        gbug('createStream', 'audio playing ');
+      };
+    }(audioCount), false);
+
+
+    }// end of playerType audio
+
+  if(state.playerType=="media"){
+    //gbug('createStream', 'playerType media ');
+
+    //stream = null;
+    //stream = new Audio(myStreamUrl);
+    state.audioCount++;
+
+    //stream.audioNum=state.audioCount;
+    //dbuga('createStream() media 4a');
+
+    if(state.streamPlaying){
+      //dbuga('streamPlaying so 4b stop()');
+      stream.stop();
+      }
+    if(state.streamCreated){
+      //dbuga('streamCreated so 4c release()');
+      stream.release();
+      state.streamCreated=false;
+      }
+    //dbuga('createStream() 4d');
+
+    //dbuga("createStream() android "+myStreamUrl);
+    stream = new Media(myStreamUrl, mediaSuccess, mediaError, mediaStatus);
+      //dbuga('createStream() new Media 4e');
+    }
+  //dbuga('createStream() 5');
+  state.streamCreated=true;
+  eventStack.push("stream created");
+  return myStreamUrl;
+  }
+function playingFunction(audioCount){
+       state.streamPlaying=true;
+       state.uiPlaying=true;
+       buttonOn('home', 'playpause');
+       eventStack.push('audio playing '+audioCount);
+       updateNowPlaying();
+  }
+function stalledFunction(audioCount){
+  eventStack.push('stalledFunction '+audioCount);
+  eventStack.push('audio stalled '+audioCount);// put timer on this
+  }
+function pausedFunction(audioCount){
+  eventStack.push('audio pause '+audioCount);
+  }
+function mediaStatus(theStatus){
+  var statusArray=['media none', 'media starting', 'media running', 'media paused', 'media stopped'];
+  eventStack.push(statusArray[theStatus]);
+  }
+
+function mediaError(er){
+  eventStack.push("mediaError "+JSON.stringify(er));
+  }
+function mediaSuccess(){
+  eventStack.push("mediaSuccess");
+  }
+
+
+function togglePlaying(){
+  //dbuga('togglePlaying');
+  //dbuga('togglePlaying');
+
+  if(state.uiPlaying==true){
+    state.uiPlaying=false;
+    eventStack.push('ui pause');
+    buttonOff("home", "playpause");
+    }
+  else{
+    state.uiPlaying=true;
+    eventStack.push('ui play');
+    buttonOn("home", "playpause");
+    }
+  }
+
+
+// ----------------------------------------------------------------------------
+function genericDefault(itemName, defaultValue){
+  if (localStorage.getItem(itemName) === null) {
+    localStorage.setItem(itemName, defaultValue);
+    }
+  }
+function genericSet(itemName, newValue){
+  localStorage.setItem(itemName, newValue);
+  }
+function genericGet(itemName){
+  var value="notSet";
+  value=localStorage.getItem(itemName);
+  var valueNumber=Number(value);
+  var valueNumberString=""+valueNumber+"";
+  if(value==valueNumberString){
+    value=Number(value);
+    //dbuga(itemName+" is a Number");
+    }
+  else{
+    //dbuga(itemName+" is a String");
+    }
+
+  return value;
+  }
+
+function resumeInit(){
+  dbug('resumeInit so populateContainer');
+  currentPage="home";
+
+  populateContainer();
+  //dbuga('resumeInit 1');
+  genericDefault("alarmMinuteOfDay", 11*60+30);
+  genericDefault("sleepMinutesDefault", 10);
+  genericDefault("quality", "higher");
+  //dbuga('resumeInit 2');
+
+  console.log("quality is "+ genericGet("quality"));
+  buttonOn("quality", genericGet("quality"));
+  buttonOn("home", "home");
+  //dbuga(' resumeInit 3');
+  clearInterval(minuteInterval);
+  minuteInterval=setInterval('minuteTick()', minuteMs);
+  dialInterval=setInterval('dialTick()', 25);
+  stateInterval=setInterval('stateTick()', 1000);
+  clearInterval(secondInterval);
+  secondInterval=setInterval('secondTick()', 1000);
+  imageInterval=setInterval('imageTick()', 1000);
+
+  getLocalFaqs();
+
+  //selectPage("home");
+  getRecentSongJson();
+
+  document.addEventListener("offline", onOffline, false);
+  document.addEventListener("online", onOnline, false);
+  myStreamUrl = urlByQuality[genericGet("quality")]+"";
+
+  //if(ios){createStream();}
+  getCalendarJson();
+  StatusBar.hide();
+  //dbuga('resume init okay');
+  //window.setInterval("hostReachable('')", 10000);
+  }
+
+
+function onOffline() {
+  dbuga('onOffline()');
+  state.online=false;
+  state.internet=false;
+  eventStack.push("online false");
+  }
+function onOnline() {
+  dbuga('onOnline()');
+  state.online=true;
+  checkInternet();
+  eventStack.push("online true");
+  }
+
+
+
+
+
+
+
+
+// new json  playlist and now playing
+var recentTemp={};
+function getRecentSongJson(){
+  dbuga('getRecentSongJson()');
+  //return false;
+  var feedUrl="http://radiok.org/latest.json";
+      $.ajax({
+      url: feedUrl,
+      dataType: "json",        //  new bit
+      success: function(data) {
+        recentTemp=data;
+        parseRecentSongJson(data);
+      },
+      error: function (textStatus, errorThrown) {
+                  alert(JSON.stringify(textStatus));
+              }
+      });
+  }
+function songObjToNowData(songObj){
+  recentSong=songObj;
+  var album=recentSong.album;
+  var song=recentSong.title
+  var artist=recentSong.artist;
+  var time=recentSong.timestamp;
+  var dj=recentSong.dj;
+  var show=recentSong.show_name;
+  var days=["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+  for(var d=0; d<days.length; d++){
+    if(show.indexOf(days[d])>-1){show="";}
+    }
+  if(song.indexOf("'")>-1){
+    //song = replaceAll("'", "ZAPOS", song);
+    }
+  nowData={"dj":dj, "show":show, "time":time, "artist":artist, "song":song, "album":album};
+  }
+function parseRecentSongJson(theData){
+  //dbuga('parseRecentSongJson' +theData.songs.length);
+  if(theData.songs.length>0){
+    songObjToNowData(theData.songs[0]);
+    if((state.uiPlaying==true)&&(state.streamPlaying==true)){
+      updateNowPlaying();
+      }
+    }
+  }
+
+function getRecentSongsJson(){
+  //dbuga('getRecentSongsJson()');
+  var feedUrl="https://www.radiok.org/playlist.json";
+  //var feedUrl="playlist.json";
+      $.ajax({
+      url: feedUrl,
+      dataType: "json",        //  new bit
+      success: function(data) {parseRecentSongsJson(data);}
+      });
+  }
+function epochToTime(s){
+  var d=new Date(s*1000);
+  var t=d.toLocaleTimeString();
+
+  //dbuga(d+"|"+t);
+  var parts=t.split(" ");
+  var hhmmss=parts[0];
+  var parts=hhmmss.split(":");
+  var junk=parts.pop();
+
+  return parts.join(":");
+  }
+function updatePlaylistJson(){
+  //dbuga('updatePlaylistJson()');
+  var gradStyle=returnGradStyle();
+
+  var textStyle='padding-top:'+grid*1.8+'px; width:'+ grid*48 +'px; min-height:'+ grid*8 +'px;  line-height:'+ grid*2.5 +'px;'
+  var htmlBlock="";
+
+  for(var s=0; s<recentSongs.length; s++){
+    var album=recentSongs[s].album;
+    var song=recentSongs[s].title;
+    var artist=recentSongs[s].artist;
+    var time=recentSongs[s].timestamp;
+
+    var dj=recentSongs[s].dj;
+    //dbuga(s+' '+song);
+
+    var songClean = replaceAll("'", "-", song);
+    var artistClean = replaceAll("'", "-", artist);
+    var albumClean = replaceAll("'", "-", album);
+
+    htmlBlock+='<div class="playlistItem" style="'+textStyle+' '+gradStyle+'">';
+    htmlBlock+='<b>'+artist+'</b><br>&quot;'+song+'&quot;<br />';
+    htmlBlock+='<a id="shopLink" href="javascript:shop(\''+artistClean+'\', \''+albumClean+'\', \''+songClean+'\');"><i>'+album+'</i></a>';
+    htmlBlock+='<br /><span style="font-family:akziregular;">'+epochToTime(time)+'</span>';
+    htmlBlock+='</div>';
+    }
+
+  if(recentSongs.length==0){
+    htmlBlock+='<div class="playlistItem" style="'+textStyle+' '+gradStyle+'">';
+    htmlBlock+=  'Stuck on AM Mix';
+    htmlBlock+=  '<br /><span style="font-family:akziregular;">Live Performances from Radio K</span>';
+    htmlBlock+='</div>';
+    }
+  else{
+    htmlBlock+='<div class="playlistItem" style="'+textStyle+' '+gradStyle+'">';
+    htmlBlock+=  '<br />';
+    htmlBlock+=  '<a href="javascript:remoteLink(\'https://www.radiok.org/playlist/\');">';
+    htmlBlock+=  'More at RadioK.org</a>';
+    htmlBlock+='</div>';
+    }
+
+  document.getElementById('playlistScroller').innerHTML=htmlBlock;
+  document.getElementById('playlistHolder').style.width=grid*48+'px';
+  document.getElementById('playlistHolder').style.height='100%';
+  //dbuga('updatePlaylistJson completed ');
+  //playlistScrollerTimeout=window.setTimeout("refreshPlaylistHolderScroll()", 100);
+  }
+
+function parseRecentSongsJson(theData){
+
+  recentSongs=theData.songs;
+  //dbuga('parseRecentSongsJson '+recentSongs.length);
+  if(theData.songs.length>0){
+    songObjToNowData(theData.songs[0]);
+    }
+  updatePlaylistJson();
+  }
+
+
+
+var dlDelay=400;
+var onDemandsLoaded=false;
+function getDownloads(){
+  dbuga("getDownloads() 0");
+  if(onDemandsLoaded){return false;}
+  onDemandsLoaded=true;
+  //dbuga("getDownloads() 0");
+  instDownloads=[];
+  kscDownloads=[];
+  //rksDownloads=[];
+  wrsDownloads=[];
+  rcpDownloads=[];
+/*
+  document.getElementById('kscHolder').style.width=grid*48+'px';
+  document.getElementById('kscHolder').style.height="100%";
+  document.getElementById('rcpHolder').style.width=grid*48+'px';
+  document.getElementById('rcpHolder').style.height="100%";
+  document.getElementById('rksHolder').style.width=grid*48+'px';
+  document.getElementById('rksHolder').style.height="100%";
+  document.getElementById('wrsHolder').style.width=grid*48+'px';
+  document.getElementById('wrsHolder').style.height="100%";
+*/
+  window.setTimeout('getInstDownloads()', dlDelay);
+  }
+
+function getInstDownloads(){
+  //faqs=[];
+  var feedUrl="https://www.radiok.org/tools/packages/radiok/instudios_rss.php";
+  $.ajax({
+    url: feedUrl,
+    dataType: "xml",        // < new bit
+    success: function(xml) {
+      console.log(xml);
+      parseDownloads(xml, "In-Studios");
+      window.setTimeout('getKscDownloads()', dlDelay);
+      }
+    });
+  //dbuga('getInst() completed');
+  }
+
+function getKscDownloads(){
+  //dbuga("getKscDownloads()");
+  var broken="https://www.radiok.org/tools/packages/page_list_teasers/rss?bID=20304&cID=5324&arHandle=Main";
+  var fixed="https://www.radiok.org/tools/packages/page_list_teasers/rss?bID=20326&cID=5324&arHandle=Main";
+  var updated="https://www.radiok.org/tools/packages/page_list_teasers/rss_by_path?path=%2Ffeatures%2Fk-singles-club";//ok
+  $.ajax({
+    url: updated,
+    dataType: "xml",
+    success: function(xml) {
+      parseDownloads(xml, "K Singles Club");
+      window.setTimeout('getRcpDownloads()', dlDelay);
+    }
+    });
+  }
+function getRcpDownloads(){
+  //dbuga("getRcpDownloads()");
+  $.ajax({
+    url: "https://www.radiok.org/tools/packages/page_list_teasers/podcast_rss?path=%2Frealcollegepodcast",
+    dataType: "xml",
+    success: function(xml) {
+      parseDownloads(xml, "Real College Podcast");
+      window.setTimeout('getWrsDownloads()', dlDelay);
+      }
+    });
+  }
+/*
+function getRksDownloads(){
+  //dbuga("getRksDownloads()");
+  $.ajax({
+    url: "https://www.radiok.org/tools/packages/radiok/new/k-sessions.php",
+    dataType: "xml",
+    success: function(xml) {
+      parseDownloads(xml, "K Sessions");
+      window.setTimeout('getRksDownloads()', dlDelay);
+      }
+    });
+  }
+*/
+function getWrsDownloads(){
+  //dbuga("getWrsDownloads()");
+  $.ajax({
+    url: "https://www.radiok.org/tools/packages/page_list_teasers/podcast_rss?path=%2Ffeatures%2Fweekly-release-spotlight",
+    dataType: "xml",
+    success: function(xml) {
+      parseDownloads(xml, "Weekly Release Spotlight");
+      //dbuga('getDownloads completed');
+      }
+    });
+  }
+// remove errors on publish
+
+function parseDownloads(theXml, source){
+  console.log("parseDownloads() "+source);
+
+  if(source=="In-Studios"){
+    var instObj=xmlToJson(theXml);
+    console.log(instObj);
+    if(instObj.hasOwnProperty("rss")){
+
+      var itemsArray=instObj.rss.channel.item;
+      console.log('itemsArray.length='+itemsArray.length);
+      for (var i=0; (i<itemsArray.length)&&(i<14); i++){
+        //dbuga('i:'+i)
+        var thisObj=itemsArray[i];
+        console.log(thisObj);
+        var dateStr=thisObj.pubDate["#text"];
+        var parts=dateStr.split(" ");
+        var yyyy=parts[3];
+        var mm=monToMM[parts[2]];
+        var dd=parts[1];
+        var timeCode=parts[4];
+        var timeParts=timeCode.split(":");
+        var hhmmss=timeParts[0]+timeParts[1]+timeParts[2];
+        var sortNum=yyyy+mm+dd+hhmmss;
+        var dispDate=monToMonth[parts[2]]+" "+Number(parts[1]);
+        var title=thisObj.title["#text"];
+        var description=thisObj.description["#text"].split("Website: ")[1];
+        //this Obj.guid["#text"];
+        var link=thisObj.link["#text"];
+        //dbuga(i+' okay '+' '+sortNum+' '+dispDate+' '+title+' '+description+' '+link);
+        var item={
+          "sort":sortNum,
+          "source":source,
+          "date":dispDate,
+          "image":thisObj["image"].url["#text"],
+          "title":title,
+          "description":description,
+          "link":link
+        };
+        console.log(item);
+        instDownloads.push(item);
+        console.log('instDownloads.length='+instDownloads.length);
+      }
+      updateInstDownloads();
+    }
+  }
+
+
+  if(source=="K Singles Club"){
+    var kscObj=xmlToJson(theXml);
+    if(kscObj.hasOwnProperty("rss")){
+
+      var itemsArray=kscObj.rss.channel.item;
+      //console.log('itemsArray.length='+itemsArray.length);
+      for (var i=0; (i<itemsArray.length)&&(i<14); i++){
+        //dbuga('i:'+i)
+        var thisObj=itemsArray[i];
+        //console.log(thisObj);
+        var dateStr=thisObj.pubDate["#text"];
+        var parts=dateStr.split(" ");
+        var yyyy=parts[3];
+        var mm=monToMM[parts[2]];
+        var dd=parts[1];
+        var timeCode=parts[4];
+        var timeParts=timeCode.split(":");
+        var hhmmss=timeParts[0]+timeParts[1]+timeParts[2];
+        var sortNum=yyyy+mm+dd+hhmmss;
+        var dispDate=monToMonth[parts[2]]+" "+Number(parts[1]);
+        var title=thisObj.title["#text"];
+        var description="A curated bi-weekly mix of 10 tracks we think you should have.";
+        //this Obj.guid["#text"];
+        var link=thisObj.link["#text"];
+        //dbuga(i+' okay '+' '+sortNum+' '+dispDate+' '+title+' '+description+' '+link);
+        var item={
+          "sort":sortNum,
+          "source":source,
+          "date":"",
+          "image":"images_large/page_ondemand_button_ksc_off.png",
+          "title":title,
+          "description":description,
+          "link":link
+        };
+        kscDownloads.push(item);
+        dbuga('kscDownloads.length='+kscDownloads.length);
+      }
+      updateKscDownloads();
+    }
+  }
+
+  if(source=="K Sessions"){
+    var rksObj=xmlToJson(theXml);
+    var itemsArray=rksObj.rss.channel.item;
+    //dbuga('itemsArray.length='+itemsArray.length);
+    for (var i=0; (i<itemsArray.length)&&(i<14); i++){
+      //dbuga('i:'+i)
+      var thisObj=itemsArray[i];
+      var dateStr=thisObj.pubDate["#text"];
+      var parts=dateStr.split(" ");
+      var yyyy=parts[3];
+      var mm=monToMM[parts[2]];
+      var dd=parts[1];
+      var timeCode=parts[4];
+      var timeParts=timeCode.split(":");
+      var hhmmss=timeParts[0]+timeParts[1]+timeParts[2];
+      var sortNum=yyyy+mm+dd+hhmmss;
+      var dispDate=monToMonth[parts[2]]+" "+Number(parts[1]);
+      var title=thisObj.title["#text"];
+      var description=thisObj.guid["#text"];
+      var link=thisObj.link["#text"];
+      //dbuga(i+' okay '+' '+sortNum+' '+dispDate+' '+title+' '+description+' '+link);
+      var item={
+        "sort":sortNum,
+        "source":source,
+        "date":dispDate,
+        "image":thisObj["itunes:image"]["@attributes"]["href"],
+        "title":title,
+        "description":description,
+        "link":link
+        };
+      rksDownloads.push(item);
+      //dbuga('rksDownloads.length='+rksDownloads.length);
+
+      }
+    updateRksDownloads();
+    }
+  if(source=="Weekly Release Spotlight"){
+    wrsObj=xmlToJson(theXml);
+    var itemsArray=wrsObj.rss.channel.item;
+    //dbuga('itemsArray.length='+itemsArray.length);
+    for (var i=0; (i<itemsArray.length)&&(i<14); i++){
+      var thisObj=itemsArray[i];
+      var dateStr=thisObj.pubDate["#text"];
+      var parts=dateStr.split(" ");
+      var yyyy=parts[3];
+      var mm=monToMM[parts[2]];
+      var dd=parts[1];
+      var timeCode=parts[4];
+      var timeParts=timeCode.split(":");
+      var hhmmss=timeParts[0]+timeParts[1]+timeParts[2];
+      var sortNum=yyyy+mm+dd+hhmmss;
+      var dispDate=monToMonth[parts[2]]+" "+Number(parts[1]);
+      var band=thisObj.title["#text"];
+      var album=thisObj.description["#text"];
+      var link=thisObj.link["#text"];
+      var item={
+        "sort":sortNum,
+        "source":source,
+        "date":dispDate,
+        "image":thisObj["itunes:image"]["@attributes"]["href"],
+        "title":band,
+        "description":album,
+        "link":link
+        };
+      wrsDownloads.push(item);
+      }
+    updateWrsDownloads();
+    }
+  if(source=="Real College Podcast"){
+    rcpObj=xmlToJson(theXml);
+    var itemsArray=rcpObj.rss.channel.item;
+    //dbuga(' RCP itemsArray.length='+itemsArray.length);
+
+    for (var i=0; (i<itemsArray.length)&&(i<14); i++){
+      //dbuga('i:'+i)
+      var thisObj=itemsArray[i];
+      var dateStr=thisObj.pubDate["#text"];
+      var parts=dateStr.split(" ");
+      var yyyy=parts[3];
+      var mm=monToMM[parts[2]];
+      var dd=parts[1];
+      var timeCode=parts[4];
+      var timeParts=timeCode.split(":");
+      var hhmmss=timeParts[0]+timeParts[1]+timeParts[2];
+      var sortNum=yyyy+mm+dd+hhmmss;
+      var dispDate=monToMonth[parts[2]]+" "+Number(parts[1]);
+      var title=thisObj.title["#text"];
+      var description=thisObj.description["#text"];
+      var link=thisObj.link["#text"];
+      //dbuga(i+' okay '+' '+sortNum+' '+dispDate+' '+title+' '+description+' '+link);
+      var item={
+        "sort":sortNum,
+        "source":source,
+        "date":dispDate,
+        "image":thisObj["itunes:image"]["@attributes"]["href"],
+        "title":title,
+        "description":description,
+        "link":link
+        };
+      rcpDownloads.push(item);
+      //dbuga('rcpDownloads.length='+rcpDownloads.length);
+
+      }
+
+    updateRcpDownloads();
+    }
+  //dbuga('parse completed');
+  }
+
+var inst=[];
+var instPage=1;
+var returnFalse=" void(0);";
+
+var imageQueue=[];
+var imageInterval;
+function imageTick(){
+  if(imageQueue.length>0){
+    var thisImage=imageQueue.shift();
+    var thisId=thisImage.id;
+    var test=document.getElementById(thisId);
+    if(test){
+      console.log('imageTick() '+thisId+' '+thisImage.url);
+      test.src=thisImage.url;
+    }else{
+    }
+  }
+}
+function queueRcpImages(){
+  var sortedDownloads=rcpDownloads.sort(function(a, b){
+      return b.sort-a.sort
+    });
+  for(var d=0; d<sortedDownloads.length; d++){
+    var downloadItem=sortedDownloads[d];
+    imageQueue.push({id:"rcpThumb"+d, url:downloadItem.image});
+  }
+}
+function queueInstImages(){
+  var sortedDownloads=instDownloads.sort(function(a, b){
+      return b.sort-a.sort
+    });
+  for(var d=0; d<sortedDownloads.length; d++){
+    var downloadItem=sortedDownloads[d];
+    imageQueue.push({id:"instThumb"+d, url:downloadItem.image});
+  }
+}
+function queueWrsImages(){
+  var sortedDownloads=wrsDownloads.sort(function(a, b){
+      return b.sort-a.sort
+    });
+  for(var d=0; d<sortedDownloads.length; d++){
+    var downloadItem=sortedDownloads[d];
+    imageQueue.push({id:'wrsThumb'+d, url:downloadItem.image});
+  }
+}
+function updateInstDownloads(){
+  console.log('updateInstDownloads()');
+  var sortedDownloads=instDownloads.sort(function(a, b){
+      // furthest to nearest
+      return b.sort-a.sort
+    });
+
+  var gradStyle=returnGradStyle();
+  var textStyle='padding-top:'+grid*1.8+'px; width:'+ grid*48 +'px; min-height:'+ grid*8 +'px;  line-height:'+ grid*2.5 +'px;'
+  var htmlBlock="";
+  for(var d=0; d<sortedDownloads.length; d++){
+    var downloadItem=sortedDownloads[d];
+
+    if(d==0){
+      window.setTimeout('document.getElementById("page_ondemand_button_inst").style.backgroundImage="url('+downloadItem.image+')"', dlDelay/4);
+      window.setTimeout('document.getElementById("page_ondemand_button_inst_on").style.backgroundImage="url('+downloadItem.image+')"', dlDelay/2);
+      document.getElementById("page_ondemand_button_inst_on").style.backgroundColor='#333';
+      document.getElementById("page_ondemand_button_inst_on").style.backgroundSize=squareShrink+'%';
+      }
+
+    //dbuga(downloadItem.link);
+    //imageQueue.push({id:"instThumb"+d, url:downloadItem.image});
+    htmlBlock+='<div class="playlistItem" style="'+textStyle+' '+gradStyle+'">';
+    htmlBlock+=  '<a href="javascript:remoteLink(\''+downloadItem.link+'\');'+returnFalse+'"><img id="instThumb'+d+'" src="'+imagePath+'/page_ondemand_button_inst_on.png" style="position:absolute; left:'+grid*1+'px; width:'+grid*7 +'px; height:'+grid*7 +'px;" /></a>';
+    htmlBlock+=  '<div style="position:absolute; left:'+grid*10+'px; height:'+grid*8+'px; border:0px solid black; width:'+grid*34+'px; Zbackground-color:blue;">'
+    htmlBlock+=  '<a href="javascript:remoteLink(\''+downloadItem.link+'\');'+returnFalse+'">'+downloadItem.title+'</a>';
+    htmlBlock+=  '<br />'+downloadItem.date;
+    var label=downloadItem.description;
+    label=label.replace("https://","");
+    label=label.replace("https://","");
+    label=label.replace("www.","");
+    htmlBlock+=  ' <br /> <a href="javascript:remoteLink(\''+downloadItem.description+'\');'+returnFalse+'">'+label+'</a>';
+    htmlBlock+='</div></div>';
+    }
+  document.getElementById('instScroller').innerHTML=htmlBlock;
+  document.getElementById('instHolder').style.width=grid*48+'px';
+  document.getElementById('instHolder').style.height="100%";
+  }
+
+function updateKscDownloads(){
+  //console.log('updateKscDownloads()');
+  var sortedDownloads=kscDownloads.sort(function(a, b){
+      // furthest to nearest
+      return b.sort-a.sort
+    });
+
+  var gradStyle=returnGradStyle();
+  var textStyle='padding-top:'+grid*1.8+'px; width:'+ grid*48 +'px; min-height:'+ grid*8 +'px;  line-height:'+ grid*2.5 +'px;'
+  var htmlBlock="";
+  for(var d=0; d<sortedDownloads.length; d++){
+    var downloadItem=sortedDownloads[d];
+    if(d==0){
+      window.setTimeout('document.getElementById("page_ondemand_button_ksc").style.backgroundImage="url('+downloadItem.image+')"', dlDelay/4);
+      window.setTimeout('document.getElementById("page_ondemand_button_ksc_on").style.backgroundImage="url('+downloadItem.image+')"', dlDelay/2);
+      document.getElementById("page_ondemand_button_ksc_on").style.backgroundColor='#333';
+      document.getElementById("page_ondemand_button_ksc_on").style.backgroundSize=squareShrink+'%';
+      }
+    //dbuga(downloadItem.link);
+    htmlBlock+='<div class="playlistItem" style="'+textStyle+' '+gradStyle+'">';
+    htmlBlock+=  '<a href="javascript:remoteLink(\''+downloadItem.link+'\');'+returnFalse+'"><img src="'+imagePath+'/page_ondemand_button_ksc_on.png" style="position:absolute; left:'+grid*1+'px; width:'+grid*7 +'px; height:'+grid*7 +'px;" /></a>';
+    htmlBlock+=  '<div style="position:absolute; left:'+grid*10+'px; height:'+grid*8+'px; border:0px solid black; width:'+grid*34+'px; Zbackground-color:blue;">'
+    htmlBlock+=  ''+downloadItem.title+'<br />';
+    htmlBlock+=  ' <a href="javascript:remoteLink(\''+downloadItem.link+'\');'+returnFalse+'">'+downloadItem.description+'</a>';
+    htmlBlock+='</div></div>';
+    }
+  document.getElementById('kscScroller').innerHTML=htmlBlock;
+  document.getElementById('kscHolder').style.width=grid*48+'px';
+  document.getElementById('kscHolder').style.height="100%";
+  }
+
+function updateRcpDownloads(){
+  //dbuga('updateRcpDownloads()');
+  var sortedDownloads=rcpDownloads.sort(function(a, b){
+      // furthest to nearest
+      return b.sort-a.sort
+    });
+
+  var gradStyle=returnGradStyle();
+  var textStyle='padding-top:'+grid*1.8+'px; width:'+ grid*48 +'px; min-height:'+ grid*8 +'px;  line-height:'+ grid*2.5 +'px;'
+  var htmlBlock="";
+  for(var d=0; d<sortedDownloads.length; d++){
+    var downloadItem=sortedDownloads[d];
+    if(d==0){
+      window.setTimeout('document.getElementById("page_ondemand_button_rcp").style.backgroundImage="url('+downloadItem.image+')"', dlDelay/4);
+      window.setTimeout('document.getElementById("page_ondemand_button_rcp_on").style.backgroundImage="url('+downloadItem.image+')"', dlDelay/2);
+      document.getElementById("page_ondemand_button_rcp_on").style.backgroundColor='#333';
+      document.getElementById("page_ondemand_button_rcp_on").style.backgroundSize=squareShrink+'%';
+      }
+    //dbuga(downloadItem.link);
+    htmlBlock+='<div class="playlistItem" style="'+textStyle+' '+gradStyle+'">';
+    htmlBlock+=  '<a href="javascript:remoteLink(\''+downloadItem.link+'\');'+returnFalse+'"><img id="rcpThumb'+d+'" src="'+imagePath+'/page_ondemand_button_rcp_on.png" style="position:absolute; left:'+grid*1+'px; width:'+grid*7 +'px; height:'+grid*7 +'px;" /></a>';
+    htmlBlock+=  '<div style="position:absolute; left:'+grid*10+'px; height:'+grid*8+'px; border:0px solid black; width:'+grid*34+'px; Zbackground-color:blue;">'
+    if(downloadItem.source != "skip"){    htmlBlock+=  ''+downloadItem.source+' ';}
+    if(downloadItem.date != "skip"){htmlBlock+=  ' - '+downloadItem.date+'<br />';}
+    htmlBlock+=  ' <a href="javascript:remoteLink(\''+downloadItem.link+'\');'+returnFalse+'">'+downloadItem.title+'</a>';
+    htmlBlock+='</div></div>';
+    }
+  document.getElementById('rcpScroller').innerHTML=htmlBlock;
+  document.getElementById('rcpHolder').style.width=grid*48+'px';
+  document.getElementById('rcpHolder').style.height="100%";
+  }
+/*
+function updateRksDownloads(){
+  //dbuga('updateRksDownloads()');
+  var sortedDownloads=rksDownloads.sort(function(a, b){
+      // furthest to nearest
+      return b.sort-a.sort
+    });
+
+  var gradStyle=returnGradStyle();
+  var textStyle='padding-top:'+grid*1.8+'px; width:'+ grid*48 +'px; min-height:'+ grid*8 +'px;  line-height:'+ grid*2.5 +'px;'
+  var htmlBlock="";
+  for(var d=0; d<sortedDownloads.length; d++){
+    var downloadItem=sortedDownloads[d];
+    if(d==0){
+      window.setTimeout('document.getElementById("page_ondemand_button_rks").style.backgroundImage="url('+downloadItem.image+')"', dlDelay/4);
+      window.setTimeout('document.getElementById("page_ondemand_button_rks_on").style.backgroundImage="url('+downloadItem.image+')"', dlDelay/2);
+      document.getElementById("page_ondemand_button_rks_on").style.backgroundColor='#333';
+      document.getElementById("page_ondemand_button_rks_on").style.backgroundSize=squareShrink+'%';
+      }
+    //dbuga(downloadItem.link);
+    htmlBlock+='<div class="playlistItem" style="'+textStyle+' '+gradStyle+'">';
+    htmlBlock+=  '<a href="javascript:remoteLink(\''+downloadItem.link+'\');'+returnFalse+'"><img src="'+imagePath+'/page_ondemand_button_rks_on.png" style="position:absolute; left:'+grid*1+'px; width:'+grid*7 +'px; height:'+grid*7 +'px;" /></a>';
+    htmlBlock+=  '<div style="position:absolute; left:'+grid*10+'px; height:'+grid*8+'px; border:0px solid black; width:'+grid*34+'px; Zbackground-color:blue;">'
+    if(downloadItem.source != "skip"){    htmlBlock+=  ''+downloadItem.source+' ';}
+    if(downloadItem.date != "skip"){htmlBlock+=  ' - '+downloadItem.date+'<br />';}
+    htmlBlock+=  downloadItem.title+' - <a href="javascript:remoteLink(\''+downloadItem.link+'\');'+returnFalse+'">'+downloadItem.description+'</a>';
+    htmlBlock+='</div></div>';
+    }
+  document.getElementById('rksScroller').innerHTML=htmlBlock;
+  document.getElementById('rksHolder').style.width=grid*48+'px';
+  document.getElementById('rksHolder').style.height="100%";
+  //rksScrollerTimeout=window.setTimeout("refreshRksHolderScroll()", 100);
+  }
+*/
+function updateWrsDownloads(){
+  //dbuga('updateWrsDownloads()');
+  var sortedDownloads=wrsDownloads.sort(function(a, b){
+      // furthest to nearest
+      return b.sort-a.sort
+    });
+
+  var gradStyle=returnGradStyle();
+  var textStyle='padding-top:'+grid*1.8+'px; width:'+ grid*48 +'px; min-height:'+ grid*8 +'px;  line-height:'+ grid*2.5 +'px;'
+  var spotlightImage=sortedDownloads[0].image;
+  //dbuga("spotlightImage="+spotlightImage);
+  window.setTimeout('document.getElementById("page_ondemand_button_wrs").style.backgroundImage="url('+spotlightImage+')"', dlDelay/4);
+  window.setTimeout('document.getElementById("page_ondemand_button_wrs_on").style.backgroundImage="url('+spotlightImage+')"', dlDelay/2);
+  document.getElementById("page_ondemand_button_wrs_on").style.backgroundColor='#333';
+  document.getElementById("page_ondemand_button_wrs_on").style.backgroundSize=squareShrink+'%';
+
+  var htmlBlock="";
+  for(var d=0; d<sortedDownloads.length; d++){
+    var downloadItem=sortedDownloads[d];
+    htmlBlock+='<div class="playlistItem" style="'+textStyle+' '+gradStyle+'">';
+    htmlBlock+=  '<a href="javascript:remoteLink(\''+downloadItem.link+'\');'+returnFalse+'"><img id="wrsThumb'+d+'" src="'+imagePath+'/page_ondemand_button_wrs_on.png" style="position:absolute; left:'+grid*1+'px; width:'+grid*7 +'px; height:'+grid*7 +'px;" /></a>';
+    htmlBlock+=  '<div style="position:absolute; left:'+grid*10+'px; height:'+grid*8+'px; border:0px solid black; width:'+grid*34+'px; Zbackground-color:blue;">'
+    if(downloadItem.source != "skip"){    htmlBlock+=  ''+downloadItem.source+' ';}
+    if(downloadItem.date != "skip"){htmlBlock+=  '<br />'+downloadItem.date+' ';}
+    htmlBlock+=  ' <a href="javascript:remoteLink(\''+downloadItem.link+'\');'+returnFalse+'">'+downloadItem.title+' - '+downloadItem.description+'</a>';
+    htmlBlock+='</div></div>';
+    }
+  document.getElementById('wrsScroller').innerHTML=htmlBlock;
+  document.getElementById('wrsHolder').style.width=grid*48+'px';
+  document.getElementById('wrsHolder').style.height="100%";
+  //wrsScrollerTimeout=window.setTimeout("refreshWrsHolderScroll()", 100);
+  }
+
+
+
+
+
+var squareShrink=95;
+
+function xmlToJson(xml) {
+
+  // Create the return object
+  var obj = {};
+
+  if (xml.nodeType == 1) { // element
+    // do attributes
+    if (xml.attributes.length > 0) {
+    obj["@attributes"] = {};
+      for (var j = 0; j < xml.attributes.length; j++) {
+        var attribute = xml.attributes.item(j);
+        obj["@attributes"][attribute.nodeName] = attribute.nodeValue;
+      }
+    }
+  } else if (xml.nodeType == 3) { // text
+    obj = xml.nodeValue;
+  }
+
+  // do children
+  if (xml.hasChildNodes()) {
+    for(var i = 0; i < xml.childNodes.length; i++) {
+      var item = xml.childNodes.item(i);
+      var nodeName = item.nodeName;
+      if (typeof(obj[nodeName]) == "undefined") {
+        obj[nodeName] = xmlToJson(item);
+      } else {
+        if (typeof(obj[nodeName].push) == "undefined") {
+          var old = obj[nodeName];
+          obj[nodeName] = [];
+          obj[nodeName].push(old);
+        }
+        obj[nodeName].push(xmlToJson(item));
+      }
+    }
+  }
+  return obj;
+};
+
+
+function returnGradStyle(){
+  var gradStyle="background-image: -webkit-gradient(linear,left top,left bottom, color-stop(0%, #F2F2F2), color-stop(2%, #F2F2F2), color-stop(3%, #EDEDED), color-stop(50%, #fff), color-stop(100%, #fff));";
+  //gradStyle="";// hack to test speed
+  return gradStyle;
+  }
+
+function updateNowPlaying(){
+  dbuga('updateNowPlaying() '+nowPlaying);
+  if((state.online)&&(state.internet)&&(state.uiPlaying)&&(state.loop==false)){
+    //eventStack.push('updateNowPlaying() '+state.online+""+state.internet+" "+state.uiPlaying)
+
+    nowPlaying="<b>"+nowData.artist+"</b><br>&quot;"+nowData.song+"&quot;<br /><i>"+nowData.album+"</i>";
+    var nowShow=nowData.show;
+    if(nowShow !=""){nowShow+=" &nbsp; ";}
+    nowDj=nowShow+"DJ: "+nowData.dj;
+
+    if(state.ios){
+      //nowPlaying.updateMetas(nowData.artist,nowData.song,nowData.dj);
+      //dbuga('updateNowPlaying() is ios');
+      }
+    }
+  //dbuga('updateNowPlaying() completed ok '+nowPlaying);
+  }
+var nowDj="";
+function dateTimeToTime(theDateTime){
+  var parts=theDateTime.split(" ");
+  var timePart=parts[1];
+  var hms=timePart.split(":");
+  var hour=Number(hms[0]);
+  var minute=hms[1];
+  var period="am";
+  if(hour>12){
+    hour-=12;
+    period="pm";
+    }
+  var textTime=hour+":"+minute+" "+period;
+  return textTime;
+  }
+
+function populateCalendar(){
+  //console.log('populateCalendar() '+calendar.length);
+
+  var gradStyle=returnGradStyle();
+
+  var textStyle='padding-top:'+grid*1.8+'px; width:'+ grid*48 +'px; min-height:'+ grid*8 +'px;  line-height:'+ grid*2.5 +'px;'
+  var htmlBlock="";
+  for(var e=0; e<calendar.length; e++){
+    var eventData=calendar[e];
+    htmlBlock+='<div class="playlistItem" style="'+textStyle+' '+gradStyle+'">';
+    htmlBlock+=  '<a href="javascript:remoteLink(\''+ eventData.url +'\');">'+eventData.performers+'</a>';
+    htmlBlock+=  '<br />'+eventData.venue+'';
+    htmlBlock+=  ' &mdash; '+eventData.date;
+    htmlBlock+=  '<br /><span style="font-family:akziregular;">'+eventData.time+'</span>';
+    htmlBlock+='</div>';
+    }
+
+  document.getElementById('calendarScroller').innerHTML=htmlBlock;
+  document.getElementById('calendarHolder').style.width=grid*48+'px';
+  document.getElementById('calendarHolder').style.height="100%";
+  }
+
+function getLocalFaqs(){
+  //faqs=[];
+  //var feedUrl="https://www.radiok.org/app-faq/";
+  var feedUrl="faq.txt";
+  //dbuga('getLocalFaqs()');
+  $.ajax({
+    url: feedUrl,
+    dataType: "text",        // < new bit
+
+    success: function(data) {
+      //dbuga(data);
+      parseFaqs(data);
+      getWebFaqs();
+      }
+    });
+  //dbuga('getLocalFaqs() completed');
+  }
+function getWebFaqs(){
+  //faqs=[];
+  var feedUrl="https://www.radiok.org/app-faq/";
+  //var feedUrl="faq.txt";
+  dbuga('getWebFaqs()');
+  $.ajax({
+    url: feedUrl,
+    dataType: "text",        // < new bit
+
+    success: function(data) {
+      //dbuga(data);
+      parseFaqs(data);
+      }
+    });
+  //dbuga('getWebFaqs() completed');
+  }
+var faqs=[];
+function parseFaqs(theScrape){
+  var faqBlocks=theScrape.split('<div class="faq_item">');
+  dbuga('parseFaqs faqBlocks.length=' +faqBlocks.length);
+  if(faqBlocks.length>1){
+    faqs=[];
+    for (var s=1; s<faqBlocks.length; s++){
+      var faqBlock=faqBlocks[s];
+      var headingTempParts=faqBlock.split('<div class="faq_heading"><h2>');
+      var headingTemp=headingTempParts[1];
+      var headingParts=headingTemp.split('</h2></div>');
+      var headingText=headingParts[0];
+
+      var contentTempParts=faqBlock.split('<div class="faq_content"><p>');
+      var contentTemp=contentTempParts[1];
+      var contentParts=contentTemp.split('</p></div>');
+      var contentText=contentParts[0];
+      var thisEntry={"q":headingText, "a":contentText};
+      faqs.push(thisEntry);
+      dbuga('H:'+headingText+' C:'+contentText+'');
+      }
+    }
+  populateFaqs();
+  }
+
+function getCalendarJson(){
+  var feedUrl="https://www.radiok.org/events.json";
+  //dbuga('getCalendarJson()');
+  $.ajax({
+    url: feedUrl,
+    dataType: "json",        // new bit
+    success: function(data) {parseCalendarJson(data);}
+    });
+  //dbuga('getCalendarJson() completed');
+  }
+var calendarEvents=[];
+var calendarJson=[];
+/*
+[
+Object
+all_day: 0
+description: ""
+end: "Saturday, February 6, 2016 - 8:00pm"
+more_info_links: Array[0]
+path: "https://www.radiok.org/events/caspian-obrother"
+special_guests: Array[0]
+start: "Saturday, February 6, 2016 - 8:00pm"
+tags: Array[0]
+title: "Caspian with O'Brother"
+venue: "Triple Rock Social Club"
+*/
+function parseCalendarJson(theJson){
+  //dbuga('parseCalendarJson()');
+  calendarEvents=theJson.events;
+  calendarJson=[];
+
+  for (var c=0; c<calendarEvents.length; c++){
+    var dateTime=calendarEvents[c].start;
+    var parts=dateTime.split(" - ");
+    var time=parts.pop();
+    var date=parts.shift();
+    var rowObj={
+      "date":date,
+      "time":time,
+      "performers":calendarEvents[c].title,
+      "venue":calendarEvents[c].venue,
+      "url":calendarEvents[c].path
+      };
+    calendarJson.push(rowObj);
+    }
+  populateCalendarJson();
+
+  }
+function populateCalendarJson(){
+  //dbuga('populateCalendar() '+calendar.length);
+
+  var gradStyle=returnGradStyle();
+
+  var textStyle='padding-top:'+grid*1.8+'px; width:'+ grid*48 +'px; min-height:'+ grid*8 +'px;  line-height:'+ grid*2.5 +'px;'
+  var htmlBlock="";
+  for(var e=0; e<calendarJson.length; e++){
+    var eventData=calendarJson[e];
+    htmlBlock+='<div class="playlistItem" style="'+textStyle+' '+gradStyle+'">';
+    htmlBlock+=  '<a href="javascript:remoteLink(\''+ eventData.url +'\');">'+eventData.performers+'</a>';
+    htmlBlock+=  '<br />'+eventData.venue+'';
+    htmlBlock+=  '<br />'+eventData.date;
+    htmlBlock+=  '<br /><span style="font-family:akziregular;">'+eventData.time+'</span>';
+    htmlBlock+='</div>';
+    }
+
+  document.getElementById('calendarScroller').innerHTML=htmlBlock;
+  document.getElementById('calendarHolder').style.width=grid*48+'px';
+  document.getElementById('calendarHolder').style.height="100%";
+  }
+
+// old calendar
+function getCalendar(){
+  var feedUrl="https://www.radiok.org/tools/blocks/pro_event_list/rss.php?ctID=&bID=14940&ordering=ASC";
+  //dbuga('getCalendar()');
+  $.ajax({
+    url: feedUrl,
+    dataType: "xml",        // new bit
+    success: function(data) {parseCalendarRss(data);}
+    });
+  //dbuga('getCalendar() completed');
+  }
+
+var calendar=[];
+function parseCalendarRss(theRss){
+  //dbuga('parseCalendarRss()');
+  calendar=[];
+    $(theRss).find('item').each(function() {
+     var $this = $(this);
+     var title=$this.find("title").text();
+     //link: $this.find("link").text(),
+     //description: $this.find("description").text(),
+     var pubDate=$this.find("pubDate").text();
+     var parts=pubDate.split(" ");
+     var junk=parts.pop();
+     var hms=parts.pop();
+     var year=parts.pop();
+     var date=parts.join(" ");
+
+     var rowObj={
+       "date":date,
+       "time":hms,
+       "performers":title,
+       "venue":$this.find("description").text(),
+       "url":$this.find("link").text()
+       };
+    calendar.push(rowObj);
+    }
+  );
+  populateCalendar();
+}
+
+
+function secondTick(){
+  var nowDate=new Date();
+  var nowMod=nowDate.getHours()*60+nowDate.getMinutes();
+  var sec=nowDate.getSeconds();
+  if(sec<10){sec="0"+sec;}
+  var nowText=minuteOfDayToHour(nowMod)+":"+minuteOfDayToMM(nowMod)+":"+sec;//+" "+minuteOfDayToAmPm(nowMod);
+  var amPmText=minuteOfDayToAmPm(nowMod);
+  if(currentPage=="armed"){
+    dbug('nowText:'+nowText);
+    dbuga('amPmText:'+amPmText);
+    if(sleepSeconds>0){
+      sleepSeconds--;
+      var SS=sleepSeconds%60;
+      if(SS<10){SS="0"+SS;}
+      nowText="-"+Math.floor(sleepSeconds/60)+":"+SS;
+      }
+
+    if((nowMod+1440>=genericGet("alarmMinuteOfDay")+1440+snoozeMinutes)&&(nowMod+1440<genericGet("alarmMinuteOfDay")+1500+snoozeMinutes)){
+
+      //    -----    alarming, wake up! --------------
+
+      //dbuga('alarm');
+      nowPlaying="Alarming";
+      document.getElementById('page_home_content_djDiv').innerHTML="";
+      eventStack.push("alarm fired");
+      selectPage("wakeup");
+      }
+    }
+  document.getElementById("page_armed_content_nowtime").innerHTML=nowText;
+  document.getElementById("page_armed_content_nowAmPm").innerHTML=amPmText;
+  document.getElementById("page_wakeup_content_nowtime").innerHTML=nowText;
+  document.getElementById("page_wakeup_content_nowAmPm").innerHTML=amPmText;
+  if((ww!=window.innerWidth)||(wh!=window.innerHeight)){
+    dbuga('dimension changed so populateContainer()');
+
+    populateContainer();
+    }
+  }
+
+function selectCurrentPage(){
+  selectPage(currentPage);
+  }
+function minuteOfDayToHH(mod){
+  hour=Math.floor(mod/60)%24;
+  if(hour<10){hour="0"+hour;}
+  return hour;
+  }
+function minuteOfDayToHour(mod){
+  var hr=Math.floor(mod/60)%12;
+  if(hr==0){hr=12;}
+  return hr;
+  }
+function minuteOfDayToMin(mod){
+  var min=mod%60;
+  return min;
+  }
+function minuteOfDayToMM(mod){
+  var min=mod%60;
+  if(min<10){min="0"+min;}
+  return min;
+  }
+function minuteOfDayToAmPm(mod){
+  var ampm="PM";
+  if(Math.floor(mod/60)%12==Math.floor(mod/60)%24){ampm="AM";}
+  return ampm;
+  }
+function minuteOfDayToHalf(mod){
+  var ampm=1;
+  if(Math.floor(mod/60)%12==Math.floor(mod/60)%24){ampm=0;}
+  return ampm;
+  }
+function dialTick(){
+  //dbug('');
+  //dbuga("mouse: "+mouseX+" "+mouseY);
+
+  if(currentPage=="alarm"){
+    //dbuga("deltaY: "+(mouseY-mouseStartY));
+    updateAlarmDisplay();
+    }
+  }
+function numOfPage(pageName){
+  var pageNum=-1;
+  for (var p=0; p<pages.length; p++){
+    if(pages[p].name==pageName){
+      pageNum=p;
+      }
+    }
+  return pageNum;
+  }
+function numOfButton(pageName, buttonName){
+  var buttonNum=-1;
+  for (var p=0; p<pages.length; p++){
+    if(pages[p].name==pageName){
+      var buttons=pages[p].buttons;
+      for (var b=0; b<buttons.length; b++){
+        if(buttons[b].name==buttonName){
+          buttonNum=b;
+          }
+        }
+      }
+    }
+  return buttonNum;
+  }
+function numOfContent(pageName, contentName){
+  var contentNum=-1;
+  for (var p=0; p<pages.length; p++){
+    if(pages[p].name==pageName){
+      var contents=pages[p].contents;
+      for (var c=0; c<contents.length; c++){
+        if(contents[c].name==contentName){
+          contentNum=c;
+          }
+        }
+      }
+    }
+  return contentNum;
+  }
+function updateAlarmDisplay(){
+  var pMod=genericGet("alarmMinuteOfDay");
+  //dbug("touchingDial "+touchingDial +" "+minuteOfDayToHour(pMod)+":"+minuteOfDayToMM(pMod)+" "+minuteOfDayToAmPm(pMod));
+  var lineHeight=Math.floor(pages[numOfPage('alarm')].contents[numOfContent("alarm", "alarmTimeHour")].lineHeight*grid);
+  var nowDate=new Date();
+  var nowMod=nowDate.getHours()*60+nowDate.getMinutes();
+  if(touchingDial>-1){
+    var deltaY=(mouseY-mouseStartY);
+    var dy=deltaY-prevDeltaY;
+    prevDeltaY=deltaY;
+    var junk=dials[touchingDial].history.shift();
+    dials[touchingDial].history.push(dy);
+    dials[touchingDial].atVal=dials[touchingDial].initVal-(deltaY/lineHeight);
+    if(dials[touchingDial].atVal>dials[touchingDial].maxVal){dials[touchingDial].atVal=dials[touchingDial].maxVal;}
+    if(dials[touchingDial].atVal<0){dials[touchingDial].atVal=0;}
+
+    //dbuga(dials[0].atVal+" "+dials[1].atVal+" "+dials[2].atVal+" "+dials[3].atVal);
+    var list=dials[touchingDial].history;
+    //dbuga(list.join('|'));
+    //dbuga("touchingDial "+touchingDial +" "+minuteOfDayToHour(pMod)+":"+minuteOfDayToMM(pMod)+" "+minuteOfDayToAmPm(pMod));
+    }
+  else{
+    var moved=false;
+    // go through moving dials
+    for (var d=0; d<dials.length; d++){
+      if(dials[d].prog>0){
+        moved=true;
+        //dbuga(d+" prog "+dials[d].prog);
+        dials[d].prog-=dials[d].speed;
+        if(dials[d].prog<=0){
+          dials[d].prog=0;
+          //dbug(pMod+" alarm is set to "+minuteOfDayToHour(pMod)+":"+minuteOfDayToMM(pMod)+" "+minuteOfDayToAmPm(pMod));
+          }
+        var prog=1-Math.abs(dials[d].prog)*dials[d].prog;
+        dials[d].atVal=dials[d].initVal+prog*(dials[d].destVal-dials[d].initVal);
+        }
+      }
+    }
+  document.getElementById('alarmTimeHourDial').style.top=(.75-dials[0].atVal)*lineHeight+"px";
+  document.getElementById('alarmTimeMinDial').style.top=(.75-dials[1].atVal)*lineHeight+"px";
+  document.getElementById('alarmTimeAmPmDial').style.top=(.75-dials[2].atVal)*lineHeight+"px";
+  //dbuga('touchingDial='+touchingDial);
+  if(touchingDial==-1){
+    //dbuga(pMod+" alarm is set to "+minuteOfDayToHour(pMod)+":"+minuteOfDayToMM(pMod)+" "+minuteOfDayToAmPm(pMod));
+    }
+  //dbuga('okay');
+  }
+
+
+function populateDials(){
+  //dbuga("populateDials() 0");
+
+  var mod=genericGet("alarmMinuteOfDay");
+  dials=[];
+  for (var d=0; d<pages[numOfPage('alarm')].contents.length; d++){
+    var pane=pages[numOfPage('alarm')].contents[d];
+    var dial={"name":pane.name+"Dial", "touchStart":0, "initVal":0, "atVal":0, "destVal":0, "maxVal":0, "speed":0, "prog":0, "history":initHistory, "max":0};
+    dials.push(dial);
+    }
+  dials[0].initVal=(minuteOfDayToHour(mod)+11)%12;
+  dials[1].initVal=minuteOfDayToMin(mod);
+  //alert(mod+" "+minuteOfDayToMin(mod));
+  dials[2].initVal=minuteOfDayToHalf(mod);
+  //dials[3].initVal=genericGet("sleepMinutesDefault")/5-1;
+  dials[0].atVal=dials[0].initVal;
+  dials[1].atVal=dials[1].initVal;
+  dials[2].atVal=dials[2].initVal;
+  //dials[3].atVal=dials[3].initVal;
+  dials[0].destVal=dials[0].initVal;
+  dials[1].destVal=dials[1].initVal;
+  dials[2].destVal=dials[2].initVal;
+  //dials[3].destVal=dials[3].initVal;
+  dials[0].maxVal=11;
+  dials[1].maxVal=59;
+  dials[2].maxVal=1;
+  //dials[3].maxVal=12;
+
+  var dialCode='<div id="alarmTimeHourDial" style="position:relative;">1<br />2<br />3<br />4<br />5<br />6<br />7<br />8<br />9<br />10<br />11<br />12</div>';
+  document.getElementById('page_alarm_content_alarmTimeHour').innerHTML=dialCode;
+  var dialCode='<div id="alarmTimeMinDial" style="position:relative; text-align:center;">';
+  for (var m=0; m<60; m++){
+    if(m<10){dialCode+="0"+m+"<br />";}
+    else{dialCode+=m+"<br />";}
+    }
+
+  dialCode+="</div>";
+  document.getElementById('page_alarm_content_alarmTimeMin').innerHTML=dialCode;
+
+  var dialCode='<div id="alarmTimeAmPmDial" style="position:relative; text-align:center;">AM<br />PM</div>';
+  document.getElementById('page_alarm_content_alarmTimeAmPm').innerHTML=dialCode;
+
+  var dialCode='<div id="sleepTimeDial" style="position:relative; text-align:center;">';
+  for (var m=5; m<=60; m+=5){
+    dialCode+=m+"<br />";
+    }
+  dialCode+="</div>";
+  }
+
+
+function selectPage(selectedPage){
+  console.log("selectPage "+selectedPage);
+  currentPage=selectedPage;
+  if(state.alarmSet==true){hidePage('footnav');}
+  for(var p=0; p<pageArray.length; p++){
+    if((pageArray[p] != selectedPage)&&(pageArray[p]!= 'footnav')){
+      hidePage(pageArray[p]);
+      }
+    }
+  hideTimeout=setTimeout('hideTick()', navDelay);
+  hideTick();
+  if(selectedPage=="rcp"){
+    queueRcpImages();
+    }
+  if(selectedPage=="wrs"){
+    queueWrsImages();
+    }
+  if(selectedPage=="inst"){
+    queueInstImages();
+    }
+  if(selectedPage=="home"){
+    imageQueue=[];
+    }
+  if(selectedPage=="menu"){
+    imageQueue=[];
+    }
+  }
+
+function showPage(thePage){
+  //console.log('showPage '+thePage);
+  var pageStyle=document.getElementById('page_'+thePage).style;
+  pageStyle.display="block";
+  }
+function hidePage(thePage){
+  //console.log('hidePage '+thePage);
+  var pageStyle=document.getElementById('page_'+thePage).style;
+  pageStyle.display="none";
+  }
+
+function hideTick(){
+  if(state.alarmSet==false){showPage('footnav');}
+  for(var p=0; p<pageArray.length; p++){
+    if(pageArray[p]==currentPage){
+      showPage(pageArray[p]);
+      }
+    }
+  }
+var cellsDown=64; //iPad, will be more for phones
+var containerHeight=1000;
+var originalHeight=1000;
+var contentPad=0;
+function populateContainer(){
+  dbuga('populateContainer()');
+  hideByPage={};
+  buttonMap=[];
+  pageArray=[];
+  if(window.innerWidth<window.innerHeight){
+    ww=window.innerWidth;
+    wh=window.innerHeight;
+    }
+  else{
+    wh=window.innerWidth;
+    ww=window.innerHeight;
+    }
+
+  imagePath="images_large";//ipad retina 1536, viewport 768 down to iphone6+
+  //if(ww<414){imagePath="images_medium";}//
+  //imagePath="images_medium";// force test lo res iphone5
+  //dbuga(ww+" "+imagePath);
+
+  //dbuga('populateContainer() 2 ' +imagePath);
+  var wAspect=ww/wh;
+  leftOffset=0;
+  topOffset=0;
+  grid=ww/48;
+  containerHeight=wh;
+  originalHeight=grid*58;
+  contentPad=(containerHeight-originalHeight-grid*6)/2;
+  //dbuga('populateContainer() 3 ');
+  document.getElementById('debugDiv').style.top=grid*8+"px";
+  document.getElementById('wrapper').style.backgroundSize=grid*4+"px";
+  document.getElementById('container').style.width=ww+"px";
+  document.getElementById('container').style.height=containerHeight+"px";
+  document.getElementById('container').style.left=leftOffset+"px"; // 0
+  document.getElementById('container').style.top=topOffset+"px"; // 0
+  //dbuga('populateContainer() 4 ');
+
+  document.getElementById('stateCanvas').width=ww/3;
+  document.getElementById('stateCanvas').height=wh/2;
+  document.getElementById('stateCanvas').style.left=ww/1.5+"px";
+  document.getElementById('stateCanvas').style.top=wh/4+"px";
+  document.getElementById('stateCanvas').style.position="absolute";
+  document.getElementById('stateCanvas').style.backgroundColor="rgba(25,255,255,.2)";
+
+
+
+  var htmlString="";
+
+  for(var p=0; p<pages.length; p++){
+
+    page=pages[p];
+    //dbuga(" - "+p +" "+page.name);
+    var pageHeight=grid*page.height;
+    if(p==0){pageHeight+=grid*6;}
+    if(page.vAlign != "middle"){pageHeight+=contentPad*2;}
+    heightsByPage[page.name]=pageHeight;
+    //hideStyle='top:'+(grid*page.hideTop+page.hideTopMargin*topOffset)+'px; left:'+(grid*page.hideLeft+page.hideLeftMargin*leftOffset)+'px; opacity:'+page.hideOpac+';';
+    hideStyle='top:'+(grid*page.hideTop+page.hideTopMargin*topOffset)+'px; left:'+(grid*page.hideLeft+page.hideLeftMargin*leftOffset)+'px; opacity:'+1+';';
+
+    htmlString+='<div id="page_'+page.name+'" class="pages" style="background-image:url('+imagePath+'/bg_'+page.name+'.jpg); width:'+ grid*48 +'px; height:'+ pageHeight +'px; '+hideStyle+'">';
+    pageArray.push(page.name);
+    hideByPage[page.name]={"top":(grid*page.hideTop+page.hideTopMargin*topOffset), "left":(grid*page.hideLeft+page.hideLeftMargin*leftOffset), "opac":page.hideOpac};
+
+
+
+    var boxes=page.boxes;
+    for(var b=0; b<boxes.length; b++){
+      var content=boxes[b];
+      var top=grid*content.top;
+      if(page.vAlign=="middle"){top+=contentPad};
+
+      var contentName=content.name;
+      htmlString+='<div id="page_'+page.name+'_content_'+content.name+'" style="overflow:hidden; ';
+      if(contentName.indexOf('Box')==-1){
+        htmlString+='width:'+ grid*content.width +'px; ';
+        htmlString+='height:'+ grid*content.height +'px; ';
+        }
+      else{
+        htmlString+='width:'+ (grid*content.width-2) +'px; ';
+        htmlString+='height:'+ (grid*content.height-2) +'px; ';
+        htmlString+='border:1px solid #666; ';
+        htmlString+='background-color:#333; ';
+        }
+
+      htmlString+='line-height:'+ Math.floor(grid*content.lineHeight) +'px;  ';
+      htmlString+='font-size:'+ grid*content.fontSize +'px; text-align:'+content.textAlign+'; ';
+      htmlString+='color:'+content.color +'; left:'+grid*content.left+'px;  ';
+      htmlString+='font-family:'+ content.fontFamily +'; top:'+ top +'px;">';
+      htmlString+=content.defaultText;
+      htmlString+='</div>'
+      }
+    //dbuga(' - boxes finished');
+    var buttons=page.buttons;
+    for(var b=0; b<buttons.length; b++){
+      var button=buttons[b];
+      var top=grid*button.top;
+      if((top>0)&&(page.vAlign=="middle")){top+=contentPad};
+      if(page.vAlign=="bottom"){
+        top=wh+grid*button.top;
+        }
+      if((button.name=="phone")&&(topOffset==0)){
+        htmlString+='<div id="page_'+page.name+'_button_'+button.name+'" style="font-size:'+3.3*grid+'px; line-height:'+5.5*grid+'px; text-align:center; width:'+ grid*button.width +'px; height:'+ grid*button.height +'px; left:'+ grid*button.left +'px; top:'+ top +'px;">';
+        htmlString+='<a href="tel:+16126264770"><img src="'+imagePath+'/page_'+page.name+'_button_'+button.name+'_off.png" style="border:0;" width="'+grid*button.width+'" height="'+grid*button.height+'" /></a>';
+        htmlString+='</div>'
+        }
+      else{
+        var pageName=page.name;
+        if((button.name=="home")||(button.name=="menu")){pageName="*";}
+        buttonMap.push({"page":page.name, "name":button.name, "left":grid*button.left, "right":grid*button.left+grid*button.width, "top":top, "bottom":top+grid*button.height});
+        htmlString+='<div id="page_'+page.name+'_button_'+button.name+'" class="buttons" style="background-image:url('+imagePath+'/page_'+pageName+'_button_'+button.name+'_off.png); width:'+ grid*button.width +'px; height:'+ grid*button.height +'px; left:'+ grid*button.left +'px; top:'+ top +'px;">';
+        htmlString+='<div id="page_'+page.name+'_button_'+button.name+'_on" class="buttons" style="opacity:0; background-image:url('+imagePath+'/page_'+pageName+'_button_'+button.name+'_on.png); width:'+ grid*button.width +'px; height:'+ grid*button.height +'px; left:0px; top:0px;">';
+        htmlString+='</div>'
+        htmlString+='</div>'
+        }
+      }
+    //dbuga(' -- buttons finished ');
+
+    var contents=page.contents;
+    for(var c=0; c<contents.length; c++){
+      var content=contents[c];
+      var contentHeight=grid*content.height;
+      if(content.height==51){
+        contentHeight+=contentPad*2;
+        }
+      var top=grid*content.top;
+      if(page.vAlign=="middle"){top+=contentPad};
+
+      var contentName=content.name;
+      htmlString+='<div id="page_'+page.name+'_content_'+content.name+'" style="overflow:hidden; ';
+      if(contentName.indexOf('Box')==-1){
+        htmlString+='width:'+ grid*content.width +'px; ';
+        htmlString+='height:'+ contentHeight +'px; ';
+        }
+      else{
+        htmlString+='width:'+ (grid*content.width-2) +'px; ';
+        htmlString+='height:'+ (contentHeight-2) +'px; ';
+        htmlString+='border:1px solid #666; ';
+        htmlString+='background-color:#333; ';
+        }
+
+      htmlString+='line-height:'+ Math.floor(grid*content.lineHeight) +'px;  ';
+      htmlString+='font-size:'+ grid*content.fontSize +'px; text-align:'+content.textAlign+'; ';
+      htmlString+='color:'+content.color +'; left:'+grid*content.left+'px;  ';
+      htmlString+='font-family:'+ content.fontFamily +'; top:'+ top +'px;">';
+      htmlString+=content.defaultText;
+      htmlString+='</div>'
+      }
+    //dbuga(' -- contents finished ');
+
+    htmlString+='</div>'
+    }
+  //dbuga('populateContainer() 6 ');
+
+  document.getElementById('container').innerHTML=htmlString;
+
+  if(state.ios){
+    // sept 15 2016//document.getElementById("page_home_content_bufferingDiv").style.display="none";
+    //dbuga('populateContainer() 7 ios ');
+    bCanv=document.getElementById("bufferingCanvas");
+    bCtx=bCanv.getContext('2d');
+    bCanv.width=grid*12;
+    bCanv.height=grid*12;
+    //bCanv.style.backgroundColor="rgba(255,255,0,.3)";
+    }
+  else{
+    bCanv=document.getElementById("bufferingCanvas");
+    bCtx=bCanv.getContext('2d');
+    bCanv.width=grid*12;
+    bCanv.height=grid*12;
+    //bCanv.style.backgroundColor="rgba(255,255,0,.3)";
+    }
+  //dbuga('populateContainer 7');
+
+  populateDials();
+  selectCurrentPage();
+  //dbuga('add iScrolls');
+  /*
+  resultsHolderScroll=new iScroll('resultsHolder');
+  playlistHolderScroll=new iScroll('playlistHolder');
+  calendarHolderScroll=new iScroll('calendarHolder');
+  rksHolderScroll=new iScroll('rksHolder');
+  wrsHolderScroll=new iScroll('wrsHolder');
+  */
+  //dbuga('populateContainer 8');
+
+  var scrollIdArray=["resultsHolder", "playlistHolder", "calendarHolder", "instHolder", "wrsHolder", "rcpHolder", "kscHolder"];//"rksHolder"
+  for (var s=0; s<scrollIdArray.length; s++){
+    new ScrollFix(document.getElementById(scrollIdArray[s]));
+    }
+  dbuga('populateContainer ran ok so populateFaqs()');
+  populateFaqs();
+  }
+var bufferTimeout;
+var bufferMs=0;
+var bufferSec=0;
+var bCanv;
+var bCtx;
+
+function bufferStart(){
+  //dbuga('bufferStart 1');
+  state.buffering=true;
+  var d = new Date();
+  bufferMs = d.getTime();
+  bufferSec= Math.floor(bufferMs/400);
+  bufferTick();
+  }
+function bufferEnd(){
+  //dbuga('bufferEnd 1');
+  state.buffering=false;
+  bufferMs=0;
+    //dbuga('bufferEnd 2');
+
+  //bufferTick();
+  bCanv.width=Math.floor(grid*12);
+  //dbuga('bufferEnd 3');
+  }
+function bufferTick(){
+  //dbuga('bufferTick 1');
+  bCanv.width=Math.floor(grid*12);
+  window.clearTimeout(bufferTimeout);
+  var d = new Date();
+  var n = d.getTime();
+  var deltaMs=n-bufferMs;
+  var deltaSec=(Math.floor(deltaMs/400))%4;
+  //dbug("deltaSec "+deltaSec);
+  //dbuga('bufferTick 2');
+  if(deltaMs<60000){
+    //dbuga('bufferTick 3');
+    var prog=deltaMs/60000;
+    bCtx.lineWidth=grid*.6;
+    bCtx.strokeStyle="rgba(0,0,0,1)";
+    bCtx.beginPath();
+    bCtx.arc(grid*6.1, grid*6.2, grid*4.1, pi*1.5, pi*1.5+pi*2*prog, true);
+    bCtx.stroke();
+    bufferTimeout=window.setTimeout("bufferTick()", 60);
+    var message="Connecting";
+    for(var e=0; e<deltaSec; e++){
+      message='<span class="black">.</span>'+message+".";
+      }
+    nowPlaying=message;
+    document.getElementById('page_home_content_nowPlayingDiv').innerHTML=nowPlaying;
+    document.getElementById('debugDiv').innerHTML+=".";
+    if(deltaMs>30000){bufferMs+=15;}
+    if(deltaMs>45000){bufferMs+=30;}
+    if(deltaMs>55000){bufferMs+=55;}
+    }
+  //dbuga('bufferTick  completed');
+  }
+function populateFaqs(){
+  dbuga('populateFaqs() '+faqs.length);
+  var htmlString="";
+  var answersString="";
+  for (var f=0; f<faqs.length; f++){
+    var q=faqs[f].q;
+    var a=faqs[f].a;
+
+    var quoteParts=a.split('"');
+    for(var p=0; p<quoteParts.length; p++){
+      var thisPart= quoteParts[p];
+      if(thisPart.indexOf('http')>-1){
+        quoteParts[p]='javascript:remoteLink(\''+thisPart+'\');'+returnFalse;
+        }
+      }
+    a=quoteParts.join('"');
+    //'<a href="javascript:remoteLink(\''+result.collectionViewUrl+'\');'+returnFalse+'">';
+
+    var grad="background-image: -webkit-gradient(linear,left top,left bottom, color-stop(0%, #232323), color-stop(2%, #232323), color-stop(3%, #181818), color-stop(100%, #000));";
+
+    a=a.replace(/socialSize/g, (7*grid)+"px");
+    htmlString+='<div id="question_'+f+'" class="questionHolder" style="width:'+48*grid+'px; max-height:'+10*grid+'px; height:auto; display:block; '+grad+'">';
+    htmlString+=  '<div id="twistie_'+f+'" class="twistie" style="padding-top:'+1.1*grid+'px; padding-bottom:'+1.1*grid+'px; width:'+40*grid+'px; ';
+    htmlString+=  'padding-left:'+grid*3+'px; padding-right:'+grid*6+'px; line-height:'+2.4*grid+'px; font-size:'+1.8*grid+'px; ';
+    htmlString+=  'background-image:url('+imagePath+'/page_faqs_button_twistie_on.png); background-size:'+7*grid+'px '+7*grid+'px;">'+q+'</div>';
+    htmlString+='</div>'
+    answersString+='<div id="answer_'+f+'" class="answer"  style="width:'+40*grid+'px; margin-left:'+grid*3+'px; top:'+grid*10+'px; line-height:'+2.6*grid+'px; font-size:'+2*grid+'px;">'+a+'</div>';
+    }
+
+/*
+
+      thisQuestion.style.maxHeight=10*grid+'px';
+      thisQuestion.style.height='auto';
+*/
+
+  document.getElementById('page_faqs_content_faqsDiv').innerHTML=htmlString+answersString;
+
+
+
+  var htmlString="";
+  htmlString+='<div class="" style="width:'+48*grid+'px;'+grad+'">';
+  htmlString+=  '<div style="color:#aaa; padding-top:'+.75*grid+'px; font-family:akziregular; ';
+  htmlString+=  'padding-bottom:'+1*grid+'px; width:'+44*grid+'px; ';
+  htmlString+=  'padding-left:'+grid*3+'px; padding-right:'+grid*2+'px; ';
+  htmlString+=  'line-height:'+1.8*grid+'px; font-size:'+1.6*grid+'px; text-align:center;">';
+  htmlString+=  '&copy; Regents of the University of Minnesota 2018.<br>All rights reserved. Developed by Jambots.com';
+  htmlString+='</div></div>'
+  document.getElementById('page_faqs_content_regentsDiv').innerHTML=htmlString;
+  }
+
+
+function selectTwistie(theTwistie){
+  //console.log('selectTwistie('+theTwistie+')');
+  selectedTwistie=theTwistie;
+  if(theTwistie==-1){
+    //reveal all questions, hide all answers
+/*
+    for (q=0; q<faqs.length; q++){
+      var thisQuestion=document.getElementById('question_'+q)
+      var thisTwistie=document.getElementById('twistie_'+q)
+      var thisAnswer=document.getElementById('answer_'+q)
+      thisQuestion.style.display='block';
+      thisTwistie.style.backgroundImage='url('+imagePath+'/page_faqs_button_twistie_on.png)';
+      thisAnswer.style.display="none";
+      }
+*/
+    populateFaqs();
+    }
+  else{
+    for (q=0; q<faqs.length; q++){
+      var thisQuestion=document.getElementById('question_'+q)
+      var thisTwistie=document.getElementById('twistie_'+q)
+      var thisAnswer=document.getElementById('answer_'+q)
+      if(q==theTwistie){
+        //reveal selected question and answer
+        thisQuestion.style.display='block';
+        thisTwistie.style.backgroundImage='url('+imagePath+'/page_faqs_button_twistie_off.png)';
+        thisAnswer.style.display="block";
+        }
+      else{
+        // hide all other q&a
+        thisQuestion.style.display='none';
+        thisTwistie.style.backgroundImage='url('+imagePath+'/page_faqs_button_twistie_on.png)';
+        thisAnswer.style.display="none";
+        }
+      }
+    }
+  }
+
+function endDialTouch(){
+  //dbuga(' -- endDialTouch() touchingDial='+touchingDial);
+  if(touchingDial>-1){
+
+    //set up inertial docking
+    dials[touchingDial].initVal=dials[touchingDial].atVal;
+    dials[touchingDial].speed=1/20;
+    var totalDelta=0;
+    //dbuga(' -- 1 endDialTouch() touchingDial='+touchingDial);
+    for (var h=0; h<dials[touchingDial].history.length; h++){
+      totalDelta+=dials[touchingDial].history[h];
+      }
+    var toss=0-totalDelta/(grid*4);
+    //alert(toss);
+    //dbuga(' -- endDialTouch() touchingDial='+touchingDial);
+    dials[touchingDial].destVal=Math.floor(dials[touchingDial].initVal+toss+.5);
+    dials[touchingDial].prog=1;
+    if(dials[touchingDial].destVal<0){dials[touchingDial].destVal=0;}
+    if(dials[touchingDial].destVal>dials[touchingDial].maxVal){dials[touchingDial].destVal=dials[touchingDial].maxVal;}
+    var hour=(dials[0].destVal+1)%12;
+    //dbuga(' --  hour='+hour);
+    //dbuga(' -- dials[0].destVal='+dials[0].destVal);
+    //dbuga(' -- dials[1].destVal='+dials[1].destVal);
+    //dbuga(' -- dials[2].destVal='+dials[2].destVal);
+    genericSet("alarmMinuteOfDay", 60*hour+dials[1].destVal+dials[2].destVal*60*12);
+    //dbuga("amod 7 :"+genericGet("alarmMinuteOfDay"));
+    touchingDial=-1;
+    //dbuga(' -- 8 endDialTouch() touchingDial='+touchingDial);
+    }
+  }
+
+function buttonOn(thePage, theButton){
+  //console.log('page_'+thePage+'_button_'+theButton+'_on');
+  document.getElementById('page_'+thePage+'_button_'+theButton+'_on').style.opacity="1";
+  }
+function buttonOff(thePage, theButton){
+  //console.log('page_'+thePage+'_button_'+theButton+'_on');
+  document.getElementById('page_'+thePage+'_button_'+theButton+'_on').style.opacity="0";
+  }
+
+
+function shop(artist, album, song){
+  //dbuga("shop("+artist+", "+album+", "+song+")");
+  if(state.android){
+    var keywords=artist+" "+album;
+    //+" "+song;
+    var shopUrl="https://www.amazon.com/s?ie=UTF8&keywords="+keywords+"&index=music&link_code=qs";
+    window.setTimeout("remoteLink('"+shopUrl+"')", navDelay);
+    }
+  else{
+    selectPage("shopempty");
+    var artistAlbumSong=artist+" "+album+" "+song;
+    var terms=artistAlbumSong.replace(/ /g, "+");
+    document.getElementById('page_shopempty_content_shopStatusDiv').innerHTML="Searching: "+artist+"<br>"+album;
+    var feedUrl="https://itunes.apple.com/search?limit=20&term="+terms;
+    $.ajax({
+      url: feedUrl,
+      dataType: "text",        //  new bit
+      success: function(data) {parseItunesResults(data);}
+      });
+    }
+  }
+
+function parseItunesResults(theData){
+  //dbuga("parseItunesResults");
+  var itunesJson=JSON.parse(theData);
+  var allResults=itunesJson.results;
+  var glom="|";
+  var results=[];
+  for(var r=0; r<allResults.length; r++){
+    var result=allResults[r];
+    var testString="|"+result.artistName+result.collectionName+"|";
+    if(glom.indexOf(testString)==-1){
+      glom+=testString;
+      results.push(result);
+      }
+    }
+
+  var gradStyle=returnGradStyle();
+
+  //var gradStyle="background-image: -webkit-gradient(linear,left top,left bottom, color-stop(0%, #F2F2F2), color-stop(2%, #F2F2F2), color-stop(3%, #EDEDED), color-stop(50%, #fff), color-stop(100%, #fff));";
+  var headStyle='clear:both; padding-top:'+grid*1.8+'px; width:'+ grid*48 +'px; min-height:'+ grid*4 +'px;  line-height:'+ grid*2.5 +'px; text-align:center;';
+  var textStyle='clear:both; padding-top:'+grid*1.8+'px; width:'+ grid*48 +'px; min-height:'+ grid*16 +'px;  line-height:'+ grid*2.5 +'px; text-align:left;';
+  var imgStyle='float:left; padding-top:'+grid*1.8+'px; width:'+ grid*12 +'px; height:'+ grid*12 +'px; margin:0 '+ grid*2 +'px 0 '+ grid*2 +'px;'
+  var htmlBlock="";
+  //dbuga("results.length="+results.length);
+  if(results.length>0){
+    selectPage("shop");
+    htmlBlock='<div class="playlistItem" style="'+headStyle+' '+gradStyle+' ">';
+    htmlBlock+=  'iTunes Results';
+    htmlBlock+='</div>';
+    for(var r=0; r<results.length; r++){
+      var result=results[r];
+      //dbuga(result.artistName+" "+result.collectionName);
+      htmlBlock+='<div class="playlistItem" style="'+textStyle+' '+gradStyle+'">';
+      htmlBlock+=  '<a href="javascript:remoteLink(\''+result.collectionViewUrl+'\');'+returnFalse+'"><img src="'+result.artworkUrl100+'" style="'+imgStyle+'" /></a>';
+      htmlBlock+=  '<br /><span style="font-family:akziregular;">'+result.artistName+'</span>';
+      htmlBlock+=  '<br /><a href="javascript:remoteLink(\''+result.collectionViewUrl+'\');'+returnFalse+'"><span style="">'+result.collectionName+'</span></a>';
+      htmlBlock+='</div>';
+      }
+    document.getElementById('resultsScroller').innerHTML=htmlBlock;
+    document.getElementById('resultsHolder').style.width=grid*48+'px';
+    document.getElementById('resultsHolder').style.height="100%";
+    }
+  else{
+    //dbuga('shop empty')
+    document.getElementById('page_shopempty_content_shopStatusDiv').innerHTML="Sorry... this track not found in iTunes Store.";
+    }
+  }
+
+
+function remoteLink(theUrl){
+  //dbuga("remoteLink "+theUrl);
+
+  if(theUrl.indexOf('mp3')>-1){
+    state.uiPlaying=false;
+    buttonOff("home", "playpause");
+    if(state.streamPlaying){pauseStream();}
+    }
+  var ref = window.open(theUrl, "_system");
+  //dbuga("remoteLink ran");
+  }
+var touchPageName="";
+var touchButtonName="";
+function rememberButton(pageName, buttonName){
+  //dbuga("rememberButton("+pageName+", "+buttonName+")");
+  buttonOn(pageName, buttonName);
+  touchPageName=pageName;
+  touchButtonName=buttonName;
+  }
+
+function minuteTick(){
+  //dbuga('minuteTick currentPage='+currentPage);
+  //eventStack.push("minuteTick()");
+  if(currentPage=="playlist"){
+    getRecentSongsJson();
+    }
+  else{
+    getRecentSongJson();
+    }
+  }
+function remoteControlPause(){
+  eventStack.push("remote paused");
+  state.remotePaused=true;
+  }
+function remoteControlPlay(){
+  eventStack.push('remote play');
+  state.remotePaused=false;
+  }
+
+
+// touch
+function handleTouchEvent(e){
+  if(e.type=="touchstart"){
+    //dbug('');
+    }
+  //dbuga("handleTouchEvent "+e.type);
+  if(e.type=="touchend"){
+    if(touchPageName != ""){
+      e.preventDefault();
+      handleButton(touchPageName, touchButtonName);
+      touchPageName="";
+      touchbuttonName="";
+      }
+    }
+  if(e.type=="touchstart"){
+    if(e.touches.length==3){dbug('');}
+    px=e.touches[0].pageX-leftOffset;
+    py=e.touches[0].pageY-topOffset;
+    //dbuga('px:'+px+' py:'+py);
+    var target=e.touches[0].target;
+    var targetId=target.id;
+    lastTouchId=targetId;
+    //var targetType=typeof target;
+    //dbuga(currentPage+' &nbsp; target='+target+' target.id='+targetId);
+    //dbuga(' - javascript? '+targetType);
+    if((currentPage=="faqs")&&(targetId.indexOf('twistie')>-1)){// skip to twisties if faqs and target match
+      if(selectedTwistie==-1){
+        var parts=targetId.split('_');
+        var targetNum=Number(parts[1]);
+        selectTwistie(targetNum);
+        }
+      else{
+        selectTwistie(-1);
+        }
+      }
+    else{
+      for (m=0; m<buttonMap.length; m++){
+        area=buttonMap[m];
+        if((px>area.left)&&(px<area.right)&&(py>area.top)&&(py<area.bottom)){
+          //dbuga("py=" +py +" heightsByPage["+currentPage+"]="+heightsByPage[currentPage]);
+          if((currentPage==area.page)||(py>heightsByPage[currentPage]+contentPad/grid)){// on page or footnav
+
+            //console.log('touchstart page:'+area.page+' name:'+area.name+' currentPage:'+currentPage);
+            if(area.name.indexOf('timeset')>-1){
+              var mid=(area.top+area.bottom)/2;
+              var tenth=Math.floor(10*(px-area.left)/(area.right-area.left));
+              var pol=-1;
+              if(mid>py){pol=1}
+              if(tenth<4){alarmIncDec=pol*60;}
+              if((tenth==4)||(tenth==5)){alarmIncDec=pol;}
+              if(tenth>5){alarmIncDec=12*pol*60;}
+              handleButton(area.page, area.name)
+              }
+            else{
+              rememberButton(area.page, area.name);
+              }
+            //dbuga(area.page+" "+area.name);
+            }
+          }
+        }
+      }
+    }
+  //dbuga('handle completed');
+  }
+
+
+function gestureStart(event) {
+  event.preventDefault();
+  }
+function gestureChange(event) {
+  event.preventDefault();
+  }
+function gestureEnd(event) {
+  event.preventDefault();
+  }
+
+function touchCancel(event){
+  event.preventDefault();
+  }
+var debugCount=0;
+function mouseup(e){
+  //dbuga('mouseup(e) touchingDial='+touchingDial);
+  endDialTouch();
+  }
+function mousedown(e){
+  mouseX=e.pageX;
+  mouseY=e.pageY;
+  handleTouchEvent({"type":"touchstart", "touches":[{"pageX":e.clientX, "pageY":e.clientY, "target":e.target}]});
+  }
+
+function mousemove(e){
+  mouseX=e.pageX;
+  mouseY=e.pageY;
+  }
+function touchStart(event){
+  //console.log(Math.floor(event.touches[0].pageX)+" "+Math.floor(event.touches[0].pageY));
+
+  if(event.touches.length>2){
+    //dbuga('');
+    debugCount++;
+    if(debugCount>2){
+      debugCount=0;
+      debugging=!(debugging);
+      }
+
+    }
+  mouseX=event.touches[0].pageX;
+  mouseY=event.touches[0].pageY;
+  handleTouchEvent(event);
+  }
+
+function touchMove(event){
+  //console.log(Math.floor(event.touches[0].pageX)+" "+Math.floor(event.touches[0].pageY));
+  if((currentPage !="inst")&&(currentPage !="wrs")&&(currentPage !="rcp")&&(currentPage !="ksc")&&(currentPage !="playlist")&&(currentPage !="events")&&(currentPage !="shop")){
+    //(currentPage !="rks")
+    event.preventDefault();
+    }
+  if(currentPage =="alarm"){
+    mouseX=event.touches[0].pageX;
+    mouseY=event.touches[0].pageY;
+    //dbuga(mouseX+" "+mouseY);
+    }
+  if(lastTouchId.indexOf("page_")>-1){
+    event.preventDefault();
+    }
+  }
+
+function touchEnd(event){
+  if(touchingDial==-1){
+    handleTouchEvent(event);
+    }
+  else{
+    endDialTouch();
+    }
+  }
+function moused(e){}
+
+
+// utilities
+function dbuga(theString){
+  if(debugging){
+    document.getElementById('debugDiv').style.display="block";
+    document.getElementById('debugDiv').innerHTML+="<br />"+theString;
+    }
+  }
+
+function dbug(theString){
+  if(debugging){
+    document.getElementById('debugDiv').style.display="block";
+    document.getElementById('debugDiv').innerHTML=theString;
+    }
+  }
+var pi=Math.PI;
+function graphState(){
+  var canv=document.getElementById('stateCanvas');
+  if(debugging==false){
+    canv.style.display="none";
+    return false;
+    }
+  canv.style.display="block";
+
+  canv.height=Math.floor(wh*.75);
+  canv.style.top=wh*.125+"px";
+  canv.style.backgroundColor="rgba(50,50,50,.5)";
+  var ctx=canv.getContext('2d');
+  var w=canv.width;
+  var h=canv.height;
+  var stepPx=h/stateKeys.length;
+  var pad=w/20;
+  ctx.lineWidth=w/40;
+  ctx.font = Math.floor(stepPx/2)+'px Helvetica';
+  ctx.textAlign = 'left';
+  ctx.textBaseline = 'middle';
+  for(var n=0; n<stateKeys.length; n++){
+    var textColor="#aaa";
+    var bgColor="#444";
+    var thisKey=stateKeys[n];
+    var thisVal=state[thisKey];
+    if(typeof thisVal=="boolean"){
+      if(thisVal){
+        textColor="#fff";
+        bgColor="#ccc";
+        }
+      ctx.strokeStyle = textColor;
+      ctx.beginPath();
+      ctx.arc(stepPx/2,stepPx*n+stepPx/2, stepPx/4, 0, pi*2,true);
+      ctx.fillStyle = bgColor;
+      ctx.fill();
+      ctx.stroke();
+      }
+    if(typeof thisVal=="number"){
+      if(thisVal>0){
+        textColor="#fff";
+        bgColor="#888";
+        }
+      ctx.fillStyle = textColor;
+      ctx.fillText(thisVal,pad,stepPx*n+stepPx/2);
+      }
+    if(typeof thisVal=="string"){
+      if(thisVal != ""){
+        textColor="#fff";
+        bgColor="#888";
+        }
+      ctx.fillStyle = textColor;
+      ctx.fillText(thisVal,0,stepPx*n+stepPx/2);
+      }
+    ctx.fillStyle = textColor;
+    ctx.fillText(thisKey,stepPx*1.5,stepPx*n+stepPx/2);
+    }
+  }
+function rnd(theSeed){
+  //return 0;
+  return Math.floor(Math.random()*theSeed);
+  }
+function range(theRange){
+  //return 0;
+  return rnd(theRange)-theRange/2;
+  }
+
+function replaceAll(find, replace, str) {
+  var parts=str.split(find);
+  return parts.join(replace);
+}
+
+</script>
+</head>
+<body onload="init()" onmousedown="moused(event);" ontouchstart="touchStart(event);" ontouchmove="touchMove(event);" ontouchend="touchEnd(event);" ontouchcancel="touchCancel(event);">
+
+<div id="wrapper">
+  <div id="container">
+  </div>
+  <div id="readyStateDiv" style="position:absolute; color:#fff; line-height:10px; "></div>
+  <div id="debugDiv" style="top:20px; position:absolute;"></div>
+  <div id="stateDiv" style="top:460px;"></div>
+  <canvas id="stateCanvas" style="display:none;"></canvas>
+</div>
+</body>
+</html>
