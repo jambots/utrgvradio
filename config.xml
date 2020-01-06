@@ -4,7 +4,7 @@
         xmlns:android = "http://schemas.android.com/apk/res/android"
         id        = "edu.utrgv.radio"
         versionCode="14"
-        version   = "3.0.96">
+        version   = "3.0.97">
     <preference name="phonegap-version" value="cli-9.0.0" />
     <preference name="android-targetSdkVersion" value="28" />
     <name>UTRGV Radio</name>
