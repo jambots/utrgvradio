@@ -907,6 +907,7 @@ function initStreamguys(){
   //Build an API client instance with your specific api key.
   //This client abstracts the HTTP endpoints for the SGmetadata api.
   sgmd = SGMetadata({apiKey: accountApiKey});
+  alert(scraperUUID);
 }
 /*
 function sgmdGetCurrent(){
@@ -922,7 +923,6 @@ function sgmdGetCurrent(){
 function sgmdGetPlaylist(){
   //Fetch an array of all metadata objects for the metadata scraper.
   sgmd.getMetadata(scraperUUID, function(metadataArray) {
-  //sgmd.getCurrent(scraperUUID, function(metadataArray) {
     //Handle the array of metadata objects from the api response.
     sgmdPlaylistUpdate(metadataArray);
   });
@@ -954,7 +954,7 @@ function onOnline() {
 // new json  playlist and now playing
 var recentTemp={};
 function getRecentSongJson(){
-  dbuga('getRecentSongJson()');
+  dbuga('getRecentSongJson()'+scraperUUID);
   sgmd.getCurrent(scraperUUID, function(data) {
     //Handle the array of metadata objects from the api response.
     recentTemp=data;
