@@ -954,7 +954,7 @@ function onOnline() {
 // new json  playlist and now playing
 var recentTemp={};
 function getRecentSongJson(){
-  dbuga('getRecentSongJson()'+scraperUUID);
+  console.log('getRecentSongJson()'+scraperUUID);
   sgmd.getCurrent(scraperUUID, function(data) {
     //Handle the array of metadata objects from the api response.
     recentTemp=data;
@@ -963,20 +963,27 @@ function getRecentSongJson(){
 
   }
 function songObjToNowData(songObj){
+  console.log("songObjToNowData");
   console.log(songObj);
   parts=songObj.streamTitle.split(" - ");
   var artist=parts[0];
   var song="";
   var album="";
+  console.log('artist='+artist);
   if(parts.length>1){song=parts[1];}
-  if(parts.length>2){album=parts[1];}
+  if(parts.length>2){album=parts[2];}
+  console.log('song='+song);
+  console.log('album='+album);
+
   var time=songObj.timestamp;
-  var time=recentSong.timestamp;
   var dj="";
   var show="";
+  console.log('time '+time);
   nowData={"dj":dj, "show":show, "time":time, "artist":artist, "song":song, "album":album};
+  console.log(nowData);
 }
 function parseRecentSongJson(theData){
+  console.log('parseRecentSongJson');
   console.log(theData);
   songObjToNowData(theData);
   if((state.uiPlaying==true)&&(state.streamPlaying==true)){
