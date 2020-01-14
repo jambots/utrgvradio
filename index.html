@@ -992,8 +992,8 @@ function parseRecentSongJson(theData){
 }
 
 function getRecentSongsJson(){
-  //dbuga('getRecentSongsJson()');
-  sgmd.getCurrent(scraperUUID, function(data) {
+  console.log('getRecentSongsJson()');
+  sgmd.getMetadata(scraperUUID, function(data) {
     //Handle the array of metadata objects from the api response.
     recentTemp=data;
     parseRecentSongsJson(data);
@@ -1012,13 +1012,15 @@ function epochToTime(s){
   return parts.join(":");
   }
 function updatePlaylistJson(){
-  //dbuga('updatePlaylistJson()');
+  console.log('updatePlaylistJson()');
   var gradStyle=returnGradStyle();
 
   var textStyle='padding-top:'+grid*1.8+'px; width:'+ grid*48 +'px; min-height:'+ grid*8 +'px;  line-height:'+ grid*2.5 +'px;'
   var htmlBlock="";
 
   for(var s=0; s<recentSongs.length; s++){
+    console.log(recentsongs[s]);
+/*
     var album=recentSongs[s].album;
     var song=recentSongs[s].title;
     var artist=recentSongs[s].artist;
@@ -1036,11 +1038,12 @@ function updatePlaylistJson(){
     htmlBlock+='<a id="shopLink" href="javascript:shop(\''+artistClean+'\', \''+albumClean+'\', \''+songClean+'\');"><i>'+album+'</i></a>';
     htmlBlock+='<br /><span style="font-family:akziregular;">'+epochToTime(time)+'</span>';
     htmlBlock+='</div>';
+*/
     }
 
   if(recentSongs.length==0){
     htmlBlock+='<div class="playlistItem" style="'+textStyle+' '+gradStyle+'">';
-    htmlBlock+=  'Stuck on AM Mix';
+    htmlBlock+=  'No Playlist Available';
     htmlBlock+=  '<br /><span style="font-family:akziregular;">Live Performances from Radio K</span>';
     htmlBlock+='</div>';
     }
@@ -1063,11 +1066,9 @@ function parseRecentSongsJson(theData){
   recentSongs=theData;
   console.log(theData);
   //dbuga('parseRecentSongsJson '+recentSongs.length);
-/* restore to keep now playing up to date
   if(theData.length>0){
     songObjToNowData(theData[0]);
     }
-*/
   updatePlaylistJson();
   }
 
@@ -2585,7 +2586,7 @@ function rememberButton(pageName, buttonName){
   }
 
 function minuteTick(){
-  //dbuga('minuteTick currentPage='+currentPage);
+  console.log('minuteTick currentPage='+currentPage);
   //eventStack.push("minuteTick()");
   if(currentPage=="playlist"){
     getRecentSongsJson();
