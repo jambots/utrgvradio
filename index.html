@@ -15,6 +15,8 @@
 <script src="scrollfix.js"></script>
 <script src="pages.js?3"></script>
 <script src="handlebutton.js"></script>
+<script src="sgmetadata-client.js" type="text/javascript"></script>
+
 <link rel="stylesheet" type="text/css" href="reset-min.css">
 <link rel="stylesheet" type="text/css" href="radiokapp.css?4">
 
@@ -191,7 +193,7 @@ function checkInternet(){
     async: false,
     success: function(xml) {state.internet=true;},
     error: function (textStatus, errorThrown) {
-                alert(JSON.stringify(textStatus));
+                //alert(JSON.stringify(textStatus));
             }
     });
 }
@@ -849,8 +851,11 @@ function genericGet(itemName){
 
   return value;
   }
-
+function yourMetadataDisplayFunction(obj){
+  console.log(obj);
+}
 function resumeInit(){
+
   dbug('resumeInit so populateContainer');
   currentPage="home";
 
@@ -887,9 +892,43 @@ function resumeInit(){
   StatusBar.hide();
   //dbuga('resume init okay');
   //window.setInterval("hostReachable('')", 10000);
+  initStreamguys();
   }
 
+var sgmd={};
+var scraperUUID="";
+function initStreamguys(){
+  // streamguys
+  //This is the UUID for the example scraper.
+  scraperUUID = 'aaf7f39f-0f9b-494d-a183-50f1898308c4';
+  //This is your SGmetadata account API key.
+  var accountApiKey = 'b3fb2cb587a9efdae9a5aff8d15728b81d04d9bb';
 
+  //Build an API client instance with your specific api key.
+  //This client abstracts the HTTP endpoints for the SGmetadata api.
+  sgmd = SGMetadata({apiKey: accountApiKey});
+}
+function sgmdGetCurrent(){
+  //Fetch an array of all metadata objects for the metadata scraper.
+  //sgmd.getMetadata(scraperUUID, function(metadataArray) {
+  sgmd.getCurrent(scraperUUID, function(metadataArray) {
+    //Handle the array of metadata objects from the api response.
+    sgmdCurrentUpdate(metadataArray);
+  });
+}
+
+function sgmdGetPlaylist(){
+  //Fetch an array of all metadata objects for the metadata scraper.
+  sgmd.getMetadata(scraperUUID, function(metadataArray) {
+  //sgmd.getCurrent(scraperUUID, function(metadataArray) {
+    //Handle the array of metadata objects from the api response.
+    sgmdPlaylistUpdate(metadataArray);
+  });
+}
+function sgmdPlaylistUpdate(metaData){
+  console.log('sgmdPlaylistUpdate');
+  console.log(metaData);
+}
 function onOffline() {
   dbuga('onOffline()');
   state.online=false;
@@ -914,46 +953,34 @@ function onOnline() {
 var recentTemp={};
 function getRecentSongJson(){
   dbuga('getRecentSongJson()');
-  //return false;
-  var feedUrl="http://radiok.org/latest.json";
-      $.ajax({
-      url: feedUrl,
-      dataType: "json",        //  new bit
-      success: function(data) {
-        recentTemp=data;
-        parseRecentSongJson(data);
-      },
-      error: function (textStatus, errorThrown) {
-                  alert(JSON.stringify(textStatus));
-              }
-      });
+  sgmd.getCurrent(scraperUUID, function(data) {
+    //Handle the array of metadata objects from the api response.
+    recentTemp=data;
+    parseRecentSongJson(data);
+  });
+
   }
 function songObjToNowData(songObj){
-  recentSong=songObj;
-  var album=recentSong.album;
-  var song=recentSong.title
-  var artist=recentSong.artist;
+  console.log(songObj);
+  parts=songObj.streamTitle.split(" - ");
+  var artist=parts[0];
+  var song="";
+  var album="";
+  if(parts.length>1){song=parts[1];}
+  if(parts.length>2){album=parts[1];}
+  var time=songObj.timestamp;
   var time=recentSong.timestamp;
-  var dj=recentSong.dj;
-  var show=recentSong.show_name;
-  var days=["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
-  for(var d=0; d<days.length; d++){
-    if(show.indexOf(days[d])>-1){show="";}
-    }
-  if(song.indexOf("'")>-1){
-    //song = replaceAll("'", "ZAPOS", song);
-    }
+  var dj="";
+  var show="";
   nowData={"dj":dj, "show":show, "time":time, "artist":artist, "song":song, "album":album};
-  }
+}
 function parseRecentSongJson(theData){
-  //dbuga('parseRecentSongJson' +theData.songs.length);
-  if(theData.songs.length>0){
-    songObjToNowData(theData.songs[0]);
-    if((state.uiPlaying==true)&&(state.streamPlaying==true)){
-      updateNowPlaying();
-      }
-    }
+  console.log(theData);
+  songObjToNowData(theData);
+  if((state.uiPlaying==true)&&(state.streamPlaying==true)){
+    updateNowPlaying();
   }
+}
 
 function getRecentSongsJson(){
   //dbuga('getRecentSongsJson()');
