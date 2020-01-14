@@ -881,7 +881,6 @@ function resumeInit(){
   getLocalFaqs();
 
   //selectPage("home");
-  getRecentSongJson();
 
   document.addEventListener("offline", onOffline, false);
   document.addEventListener("online", onOnline, false);
@@ -893,6 +892,7 @@ function resumeInit(){
   //dbuga('resume init okay');
   //window.setInterval("hostReachable('')", 10000);
   initStreamguys();
+  getRecentSongJson();
   }
 
 var sgmd={};
