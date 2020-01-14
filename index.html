@@ -249,7 +249,7 @@ function onDeviceReady(){
   //dbuga("onDeviceReady() 6");
   checkInternet();
   //dbuga("onDeviceReady() 7");
-  ////resumeInit();
+  resumeInit();
   //dbuga("onDeviceReady()8");
 
   }
@@ -907,7 +907,7 @@ function initStreamguys(){
   //Build an API client instance with your specific api key.
   //This client abstracts the HTTP endpoints for the SGmetadata api.
   sgmd = SGMetadata({apiKey: accountApiKey});
-  alert(scraperUUID);
+  console.log(scraperUUID);
 }
 /*
 function sgmdGetCurrent(){
@@ -965,7 +965,7 @@ function getRecentSongJson(){
 function songObjToNowData(songObj){
   console.log("songObjToNowData");
   console.log(songObj);
-  parts=songObj.streamTitle.split(" - ");
+  parts=songObj.StreamTitle.split(" - ");
   var artist=parts[0];
   var song="";
   var album="";
