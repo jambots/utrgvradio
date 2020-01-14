@@ -1019,7 +1019,7 @@ function updatePlaylistJson(){
   var htmlBlock="";
 
   for(var s=0; s<recentSongs.length; s++){
-    console.log(recentsongs[s]);
+    console.log(recentSongs[s]);
 /*
     var album=recentSongs[s].album;
     var song=recentSongs[s].title;
@@ -1058,7 +1058,7 @@ function updatePlaylistJson(){
   document.getElementById('playlistScroller').innerHTML=htmlBlock;
   document.getElementById('playlistHolder').style.width=grid*48+'px';
   document.getElementById('playlistHolder').style.height='100%';
-  //dbuga('updatePlaylistJson completed ');
+  console.log('updatePlaylistJson completed ');
   //playlistScrollerTimeout=window.setTimeout("refreshPlaylistHolderScroll()", 100);
   }
 
