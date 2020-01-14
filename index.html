@@ -993,13 +993,11 @@ function parseRecentSongJson(theData){
 
 function getRecentSongsJson(){
   //dbuga('getRecentSongsJson()');
-  var feedUrl="https://www.radiok.org/playlist.json";
-  //var feedUrl="playlist.json";
-      $.ajax({
-      url: feedUrl,
-      dataType: "json",        //  new bit
-      success: function(data) {parseRecentSongsJson(data);}
-      });
+  sgmd.getCurrent(scraperUUID, function(data) {
+    //Handle the array of metadata objects from the api response.
+    recentTemp=data;
+    parseRecentSongsJson(data);
+  });
   }
 function epochToTime(s){
   var d=new Date(s*1000);
@@ -1062,12 +1060,14 @@ function updatePlaylistJson(){
   }
 
 function parseRecentSongsJson(theData){
-
-  recentSongs=theData.songs;
+  recentSongs=theData;
+  console.log(theData);
   //dbuga('parseRecentSongsJson '+recentSongs.length);
-  if(theData.songs.length>0){
-    songObjToNowData(theData.songs[0]);
+/* restore to keep now playing up to date
+  if(theData.length>0){
+    songObjToNowData(theData[0]);
     }
+*/
   updatePlaylistJson();
   }
 
